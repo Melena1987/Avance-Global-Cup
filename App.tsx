@@ -1,22 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Teams from './components/Teams';
 import Venue from './components/Venue';
 import EventDetails from './components/EventDetails';
 import Footer from './components/Footer';
+import LegalPage from './components/LegalPage';
+import CookieBanner from './components/CookieBanner';
 
 const App: React.FC = () => {
+  const [currentPage, setCurrentPage] = useState('main');
+
+  const navigateTo = (page: string) => {
+    setCurrentPage(page);
+    window.scrollTo(0, 0);
+  };
+
   return (
     <div className="bg-gradient-to-b from-[#1a202c] to-[#2d3748] text-gray-200 font-sans">
-      <Header />
-      <main>
-        <Hero />
-        <Teams />
-        <Venue />
-        <EventDetails />
-      </main>
-      <Footer />
+      <Header navigateTo={navigateTo} />
+      {currentPage === 'main' ? (
+        <main>
+          <Hero />
+          <Teams />
+          <Venue />
+          <EventDetails />
+        </main>
+      ) : (
+        <LegalPage navigateTo={navigateTo} />
+      )}
+      <Footer navigateTo={navigateTo} />
+      <CookieBanner navigateTo={navigateTo} />
     </div>
   );
 };

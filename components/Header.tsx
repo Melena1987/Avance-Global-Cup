@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
-const Header: React.FC = () => {
+interface HeaderProps {
+  navigateTo: (page: string) => void;
+}
+
+const Header: React.FC<HeaderProps> = ({ navigateTo }) => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -21,13 +25,13 @@ const Header: React.FC = () => {
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-[#1a202c]/90 backdrop-blur-sm shadow-lg' : 'bg-transparent'}`}>
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="#home">
+        <button onClick={() => navigateTo('main')} className="cursor-pointer">
           <img 
             src="https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761946347121_avance_global_cup_logo.png?alt=media&token=b4d7d75a-dc46-436c-b5c5-81edd0ba6154" 
             alt="Avance Global Cup Logo" 
             className="h-12 w-auto"
           />
-        </a>
+        </button>
         <nav className="hidden md:flex space-x-6">
           {navLinks.map(link => (
             <a key={link.href} href={link.href} className="text-gray-300 hover:text-white transition-colors duration-200">
