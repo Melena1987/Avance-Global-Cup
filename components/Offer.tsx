@@ -37,14 +37,9 @@ const Offer: React.FC = () => {
                             <CheckListItem>VIP access to all AVANCE Global Spain sessions & events</CheckListItem>
                             <CheckListItem>Teams must provide international travel and medical insurance</CheckListItem>
                         </ul>
-                         <img 
-                            src="https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761961521665_avance_cup_embassy_logo_white.png?alt=media&token=a3b2c1d4-5e2f-3a9b-8c6d-7e4f1d0a2b8c" 
-                            alt="Avance Global Cup powered by The Embassy" 
-                            className="mt-10 h-14 w-auto"
-                        />
                     </div>
                     <div ref={imageRef} className={`reveal ${isImageVisible ? 'visible' : ''} w-full h-full min-h-[500px] rounded-lg overflow-hidden shadow-2xl`} style={{transitionDelay: '200ms'}}>
-                        <img src="https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761961424177_action_shot_vertical.jpg?alt=media&token=c2c1b4d5-6e3f-4a0b-9c7d-8e5f2d1a3b9c" alt="Basketball player in action" className="w-full h-full object-cover"/>
+                        <img src="https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761945821047_AVANCE_BASKETBALL_42.jpg?alt=media&token=f9981e01-d2d5-4d21-a9f3-1e5edb341f65" alt="Basketball player in action" className="w-full h-full object-cover"/>
                     </div>
                 </div>
             </div>
