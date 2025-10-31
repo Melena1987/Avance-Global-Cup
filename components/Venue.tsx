@@ -15,6 +15,16 @@ const Venue: React.FC = () => {
         "Perfect Mediterranean climate, which helps attract visitors in January."
     ];
 
+    const venueImages = [
+        "https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761950147664_TheEmbassyTC-imagen_015_400x400.jpg?alt=media&token=2d4244b8-f480-4ff3-adc1-dfc165edaa3a",
+        "https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761950147664_TheEmbassyTC-imagen_025_400x400.jpg?alt=media&token=0734f083-4749-4a46-9f88-f6ee7bfd0f53",
+        "https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761950147664_TheEmbassyTC-imagen_019_400x400.jpg?alt=media&token=6bf0b512-e239-4863-af3c-3455d7c77f7a",
+        "https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761950147664_TheEmbassyTC-imagen_036_400x400.jpg?alt=media&token=e35e2655-a8cb-4db4-b527-54e76095b763",
+        "https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761950147664_TheEmbassyTC-imagen_031_400x400.jpg?alt=media&token=1484f778-a8dd-4cff-9e23-780295ae2092",
+        "https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761950147664_TheEmbassyTC-imagen_030_400x400.jpg?alt=media&token=23ced551-732f-4253-b49f-5d07c3fd78d5",
+        "https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761950147664_TheEmbassyTC-imagen_050_400x400.jpg?alt=media&token=91bbf74f-6cad-4f7c-9bfb-8c020278973a"
+    ];
+
     const textRef = useRef<HTMLDivElement>(null);
     const imagesRef = useRef<HTMLDivElement>(null);
     const isTextVisible = useOnScreen(textRef);
@@ -25,7 +35,7 @@ const Venue: React.FC = () => {
             <div className="container mx-auto px-6">
                 <h2 className="text-4xl font-extrabold text-white text-center mb-12">The Venue: A Global Basketball Epicenter</h2>
 
-                <div className="grid lg:grid-cols-2 gap-12 items-start">
+                <div className="grid lg:grid-cols-2 gap-12 items-center">
                     <div ref={textRef} className={`reveal ${isTextVisible ? 'visible' : ''}`}>
                         <p className="text-lg text-gray-300 mb-6">
                             The tournament will be held on the <span className="font-bold text-blue-300">Costa del Sol</span>, which is considered an ideal meeting point due to its:
@@ -38,22 +48,23 @@ const Venue: React.FC = () => {
                                 </li>
                             ))}
                         </ul>
-                         <p className="bg-[#222a35] p-6 rounded-lg text-gray-300 leading-relaxed border border-gray-700">
-                            <span className="font-bold text-white">The Embassy</span>, is an elite center co-founded by former professional players José Manuel Calderón and Berni Rodríguez. NBA stars such as Donovan Mitchell, Jaylen Brown, and Karl-Anthony Towns have used its state-of-the-art facilities for their training.
-                        </p>
+                         <div className="bg-[#222a35] p-6 rounded-lg border border-gray-700">
+                            <img 
+                                src="https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761947263093_Logo_THE_EMBBASSY_BLANCO_SIN_FONDO_400x400.png?alt=media&token=31d65c7b-9097-4fa6-a1b9-5aea3d115ff3" 
+                                alt="The Embassy Logo"
+                                className="h-10 w-auto mb-4"
+                            />
+                            <p className="text-gray-300 leading-relaxed">
+                                <span className="font-bold text-white">The Embassy</span>, is an elite center co-founded by former professional players José Manuel Calderón and Berni Rodríguez. NBA stars such as Donovan Mitchell, Jaylen Brown, and Karl-Anthony Towns have used its state-of-the-art facilities for their training.
+                            </p>
+                        </div>
                     </div>
-                    <div ref={imagesRef} className={`reveal ${isImagesVisible ? 'visible' : ''} grid grid-cols-2 grid-rows-3 gap-4`} style={{transitionDelay: '200ms'}}>
-                        <div className="col-span-2 row-span-1 rounded-lg overflow-hidden shadow-2xl">
-                            <img src="https://picsum.photos/800/400?image=835" alt="Venue exterior" className="w-full h-full object-cover"/>
-                        </div>
-                        <div className="col-span-1 row-span-2 rounded-lg overflow-hidden shadow-2xl">
-                             <img src="https://picsum.photos/400/800?image=1078" alt="Basketball hoop detail" className="w-full h-full object-cover"/>
-                        </div>
-                        <div className="col-span-1 row-span-1 rounded-lg overflow-hidden shadow-2xl">
-                             <img src="https://picsum.photos/400/400?image=292" alt="Training center court" className="w-full h-full object-cover"/>
-                        </div>
-                         <div className="col-span-1 row-span-1 rounded-lg overflow-hidden shadow-2xl">
-                             <img src="https://picsum.photos/400/400?image=1062" alt="Training center building" className="w-full h-full object-cover"/>
+                    <div ref={imagesRef} className={`reveal ${isImagesVisible ? 'visible' : ''} flex flex-col justify-center h-full`} style={{transitionDelay: '200ms'}}>
+                        <div className="scrolling-ribbon">
+                            <div className="scrolling-ribbon-content">
+                                {venueImages.map((src, index) => <img key={`img1-${index}`} src={src} alt={`Venue image ${index + 1}`} />)}
+                                {venueImages.map((src, index) => <img key={`img2-${index}`} src={src} alt={`Venue image ${index + 1}`} />)}
+                            </div>
                         </div>
                     </div>
                 </div>
