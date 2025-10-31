@@ -17,73 +17,81 @@ const Hero: React.FC = () => {
   return (
     <section 
         id="home" 
-        className="relative min-h-screen flex items-center justify-center text-center text-white bg-cover bg-center bg-fixed"
+        className="relative pt-40 pb-20 text-white bg-cover bg-center bg-fixed"
         style={{ backgroundImage: "url('https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761945946387_AVANCE_BASKETBALL_SanDiego_D2-12.jpg?alt=media&token=528b931d-8ae2-44b7-af4e-a2cf197a42b9')" }}
     >
+      <div className="absolute inset-0 bg-black/60"></div>
       
-      <div className="relative z-10 container mx-auto px-6 py-24">
+      <div className="relative z-10 container mx-auto px-6">
         
-        <div className="max-w-5xl mx-auto">
-            <img 
-                src="https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761946347121_avance_global_cup_logo.png?alt=media&token=b4d7d75a-dc46-436c-b5c5-81edd0ba6154" 
-                alt="Avance Global Cup Logo" 
-                className="h-20 md:h-24 w-auto mx-auto mb-6"
-            />
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-wide uppercase mb-3 drop-shadow-lg">
-            AVANCE GLOBAL CUP 2026
-            </h1>
-            <div className="flex justify-center items-center gap-4 mb-10">
-                <span className="text-2xl md:text-3xl text-gray-200 drop-shadow-md">
-                  by
-                </span>
+        <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
+            {/* Left Column: Main Info */}
+            <div className="text-center md:text-left">
                 <img 
-                  src="https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761947263093_Logo_THE_EMBBASSY_BLANCO_SIN_FONDO_400x400.png?alt=media&token=31d65c7b-9097-4fa6-a1b9-5aea3d115ff3" 
-                  alt="The Embassy Logo"
-                  className="h-10 md:h-12 w-auto"
+                    src="https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761946347121_avance_global_cup_logo.png?alt=media&token=b4d7d75a-dc46-436c-b5c5-81edd0ba6154" 
+                    alt="Avance Global Cup Logo" 
+                    className="h-16 md:h-20 w-auto mx-auto md:mx-0 mb-4"
                 />
+                <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-wide uppercase mb-3 drop-shadow-lg">
+                AVANCE GLOBAL CUP 2026
+                </h1>
+                <div className="flex justify-center md:justify-start items-center gap-4 mb-6">
+                    <span className="text-xl md:text-2xl text-gray-200 drop-shadow-md">
+                      by
+                    </span>
+                    <img 
+                      src="https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761947263093_Logo_THE_EMBBASSY_BLANCO_SIN_FONDO_400x400.png?alt=media&token=31d65c7b-9097-4fa6-a1b9-5aea3d115ff3" 
+                      alt="The Embassy Logo"
+                      className="h-8 md:h-10 w-auto"
+                    />
+                </div>
+                <p className="text-base md:text-lg text-gray-300 leading-relaxed drop-shadow-md max-w-xl mx-auto md:mx-0">
+                    This is a worldwide competition for high school and junior basketball clubs. It is an unprecedented event that aims to redefine basketball development by bringing together tomorrow's elite players on a global stage.
+                </p>
             </div>
-
-            <p className="text-base md:text-lg text-gray-200 leading-relaxed drop-shadow-md max-w-4xl mx-auto mb-12">
-            This is a worldwide competition for high school and junior basketball clubs. It is an unprecedented event that aims to redefine basketball development by bringing together tomorrow's elite players on a global stage.
-            </p>
-
-            <div className="inline-block bg-gray-900/30 backdrop-blur-sm border border-white/20 rounded-lg p-4 md:p-6 shadow-xl mb-16">
-                <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
-                    {/* Date */}
-                    <div className="flex items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 md:h-7 md:w-7 mr-3 text-blue-300 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            {/* Right Column: Event Details Card */}
+            <div className="flex justify-center md:justify-end">
+                <div className="w-full max-w-md bg-gray-900/30 backdrop-blur-sm border border-white/20 rounded-lg p-6 md:p-8 shadow-xl">
+                    <div className="flex items-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 mr-4 text-blue-300 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                         </svg>
-                        <span className="text-md md:text-lg font-semibold text-gray-100">January 29 to 31, 2026</span>
+                        <div>
+                            <p className="text-sm text-gray-400">Date</p>
+                            <span className="text-lg font-semibold text-gray-100">January 29 to 31, 2026</span>
+                        </div>
                     </div>
-                    <div className="w-px h-8 bg-white/20 hidden md:block"></div>
-                    {/* Location */}
+                    <div className="w-full h-px bg-white/20 my-4"></div>
                     <div className="flex items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 md:h-7 md:w-7 mr-3 text-blue-300 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 mr-4 text-blue-300 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z" />
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                         </svg>
-                        <span className="text-md md:text-lg font-semibold text-gray-100">at The Embassy in Fuengirola, Málaga, Spain.</span>
+                        <div>
+                            <p className="text-sm text-gray-400">Location</p>
+                            <span className="text-lg font-semibold text-gray-100">The Embassy in Fuengirola, Málaga, Spain</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         
-        <div className="w-full max-w-7xl mx-auto">
-          <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-4 md:gap-x-12 opacity-90">
-              {teamLogos.map((logo) => {
+        {/* Scrolling Logo Ribbon */}
+        <div className="scrolling-ribbon">
+            <div className="scrolling-ribbon-content">
+              {[...teamLogos, ...teamLogos].map((logo, index) => {
                   const isSpecialLogo = logo.name === 'NBA Academy Africa' || logo.name === 'The Program';
-                  const containerClass = isSpecialLogo 
-                      ? "h-12 md:h-16 flex items-center justify-center transition-transform duration-300 ease-in-out hover:scale-110"
-                      : "h-10 md:h-12 flex items-center justify-center transition-transform duration-300 ease-in-out hover:scale-110";
-                  
                   return (
-                      <div key={logo.name} className={containerClass}>
-                          <img src={logo.url} alt={`${logo.name} logo`} className="h-full w-auto object-contain" />
+                      <div key={`${logo.name}-${index}`} title={logo.name} className="flex-shrink-0 mx-6 flex items-center justify-center transition-transform duration-300 ease-in-out hover:scale-110">
+                          <img 
+                            src={logo.url} 
+                            alt={`${logo.name} logo`} 
+                            className={`w-auto object-contain ${isSpecialLogo ? 'h-16' : 'h-12'} opacity-80 hover:opacity-100 transition-opacity`}
+                          />
                       </div>
                   );
               })}
-          </div>
+            </div>
         </div>
       </div>
     </section>
