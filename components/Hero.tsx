@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
   return (
     <section 
         id="home" 
-        className="relative min-h-screen flex items-center justify-center text-center text-white overflow-hidden bg-cover bg-center bg-fixed"
+        className="relative min-h-screen flex items-center justify-center text-center text-white bg-cover bg-center bg-fixed"
         style={{ backgroundImage: "url('https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761945946387_AVANCE_BASKETBALL_SanDiego_D2-12.jpg?alt=media&token=528b931d-8ae2-44b7-af4e-a2cf197a42b9')" }}
     >
       
