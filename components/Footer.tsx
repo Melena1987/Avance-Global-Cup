@@ -8,7 +8,7 @@ const SocialIcon: React.FC<{ href: string, children: React.ReactNode }> = ({ hre
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#1a202c] border-t border-gray-800 py-12">
+    <footer id="contact" className="bg-[#1a202c] border-t border-gray-800 py-12">
       <div className="container mx-auto px-6 text-center text-gray-400">
         <img 
           src="https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761946347121_avance_global_cup_logo.png?alt=media&token=b4d7d75a-dc46-436c-b5c5-81edd0ba6154" 

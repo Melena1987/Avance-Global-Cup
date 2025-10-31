@@ -12,13 +12,10 @@ const Header: React.FC = () => {
   }, []);
 
   const navLinks = [
-    { href: '#overview', label: 'Overview' },
     { href: '#teams', label: 'Teams' },
-    { href: '#vision', label: 'Vision' },
     { href: '#venue', label: 'Venue' },
     { href: '#event', label: 'Event' },
-    { href: '#impact', label: 'Impact' },
-    { href: '#offer', label: 'Offer' },
+    { href: '#contact', label: 'Contact' },
   ];
 
   return (

@@ -1,13 +1,9 @@
 import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import Overview from './components/Overview';
 import Teams from './components/Teams';
-import Vision from './components/Vision';
 import Venue from './components/Venue';
 import EventDetails from './components/EventDetails';
-import Impact from './components/Impact';
-import Offer from './components/Offer';
 import Footer from './components/Footer';
 
 const App: React.FC = () => {
@@ -16,13 +12,9 @@ const App: React.FC = () => {
       <Header />
       <main>
         <Hero />
-        <Overview />
         <Teams />
-        <Vision />
         <Venue />
         <EventDetails />
-        <Impact />
-        <Offer />
       </main>
       <Footer />
     </div>

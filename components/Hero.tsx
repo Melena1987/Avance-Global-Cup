@@ -71,11 +71,18 @@ const Hero: React.FC = () => {
         {/* Bottom Team Logos */}
         <div className="w-full max-w-7xl mx-auto py-6">
           <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-4 md:gap-x-12 opacity-90">
-              {teamLogos.map((logo) => (
-                  <div key={logo.name} className="h-10 md:h-12 flex items-center justify-center">
-                      <img src={logo.url} alt={`${logo.name} logo`} className="h-full w-auto object-contain" />
-                  </div>
-              ))}
+              {teamLogos.map((logo) => {
+                  const isSpecialLogo = logo.name === 'NBA Academy Africa' || logo.name === 'The Program';
+                  const containerClass = isSpecialLogo 
+                      ? "h-12 md:h-16 flex items-center justify-center transition-transform duration-300 ease-in-out hover:scale-110"
+                      : "h-10 md:h-12 flex items-center justify-center transition-transform duration-300 ease-in-out hover:scale-110";
+                  
+                  return (
+                      <div key={logo.name} className={containerClass}>
+                          <img src={logo.url} alt={`${logo.name} logo`} className="h-full w-auto object-contain" />
+                      </div>
+                  );
+              })}
           </div>
         </div>
       </div>
