@@ -23,8 +23,8 @@ const App: React.FC = () => {
         <main>
           <Hero />
           <Teams />
-          <Venue />
           <EventDetails />
+          <Venue />
         </main>
       ) : (
         <LegalPage navigateTo={navigateTo} />
