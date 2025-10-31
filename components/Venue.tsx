@@ -35,36 +35,35 @@ const Venue: React.FC = () => {
             <div className="container mx-auto px-6">
                 <h2 className="text-4xl font-extrabold text-white text-center mb-12">The Venue: A Global Basketball Epicenter</h2>
 
-                <div className="grid lg:grid-cols-2 gap-12 items-center">
-                    <div ref={textRef} className={`reveal ${isTextVisible ? 'visible' : ''}`}>
-                        <p className="text-lg text-gray-300 mb-6">
-                            The tournament will be held on the <span className="font-bold text-blue-300">Costa del Sol</span>, which is considered an ideal meeting point due to its:
+                <div ref={textRef} className={`reveal ${isTextVisible ? 'visible' : ''} max-w-4xl mx-auto`}>
+                    <p className="text-lg text-gray-300 mb-6">
+                        The tournament will be held on the <span className="font-bold text-blue-300">Costa del Sol</span>, which is considered an ideal meeting point due to its:
+                    </p>
+                    <ul className="space-y-4 mb-10">
+                        {venuePoints.map((point, index) => (
+                            <li key={index} className="flex items-start">
+                                <CheckIcon />
+                                <span className="text-gray-300">{point}</span>
+                            </li>
+                        ))}
+                    </ul>
+                     <div className="bg-[#222a35] p-6 rounded-lg border border-gray-700">
+                        <img 
+                            src="https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761947263093_Logo_THE_EMBBASSY_BLANCO_SIN_FONDO_400x400.png?alt=media&token=31d65c7b-9097-4fa6-a1b9-5aea3d115ff3" 
+                            alt="The Embassy Logo"
+                            className="h-10 w-auto mb-4"
+                        />
+                        <p className="text-gray-300 leading-relaxed">
+                            <span className="font-bold text-white">The Embassy</span>, is an elite center co-founded by former professional players José Manuel Calderón and Berni Rodríguez. NBA stars such as Donovan Mitchell, Jaylen Brown, and Karl-Anthony Towns have used its state-of-the-art facilities for their training.
                         </p>
-                        <ul className="space-y-4 mb-10">
-                            {venuePoints.map((point, index) => (
-                                <li key={index} className="flex items-start">
-                                    <CheckIcon />
-                                    <span className="text-gray-300">{point}</span>
-                                </li>
-                            ))}
-                        </ul>
-                         <div className="bg-[#222a35] p-6 rounded-lg border border-gray-700">
-                            <img 
-                                src="https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761947263093_Logo_THE_EMBBASSY_BLANCO_SIN_FONDO_400x400.png?alt=media&token=31d65c7b-9097-4fa6-a1b9-5aea3d115ff3" 
-                                alt="The Embassy Logo"
-                                className="h-10 w-auto mb-4"
-                            />
-                            <p className="text-gray-300 leading-relaxed">
-                                <span className="font-bold text-white">The Embassy</span>, is an elite center co-founded by former professional players José Manuel Calderón and Berni Rodríguez. NBA stars such as Donovan Mitchell, Jaylen Brown, and Karl-Anthony Towns have used its state-of-the-art facilities for their training.
-                            </p>
-                        </div>
                     </div>
-                    <div ref={imagesRef} className={`reveal ${isImagesVisible ? 'visible' : ''} flex flex-col justify-center h-full`} style={{transitionDelay: '200ms'}}>
-                        <div className="scrolling-ribbon">
-                            <div className="scrolling-ribbon-content">
-                                {venueImages.map((src, index) => <img key={`img1-${index}`} src={src} alt={`Venue image ${index + 1}`} className="h-[250px]" />)}
-                                {venueImages.map((src, index) => <img key={`img2-${index}`} src={src} alt={`Venue image ${index + 1}`} className="h-[250px]" />)}
-                            </div>
+                </div>
+                
+                <div ref={imagesRef} className={`reveal ${isImagesVisible ? 'visible' : ''} mt-16`} style={{transitionDelay: '200ms'}}>
+                    <div className="scrolling-ribbon">
+                        <div className="scrolling-ribbon-content">
+                            {venueImages.map((src, index) => <img key={`img1-${index}`} src={src} alt={`Venue image ${index + 1}`} className="h-[250px]" />)}
+                            {venueImages.map((src, index) => <img key={`img2-${index}`} src={src} alt={`Venue image ${index + 1}`} className="h-[250px]" />)}
                         </div>
                     </div>
                 </div>
