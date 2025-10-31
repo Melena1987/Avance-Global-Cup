@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Overview from './components/Overview';
@@ -12,6 +12,16 @@ import CookieBanner from './components/CookieBanner';
 
 const App: React.FC = () => {
   const [currentPage, setCurrentPage] = useState('main');
+
+  useEffect(() => {
+    if (currentPage === 'main') {
+      document.title = 'Avance Global Basketball Cup';
+      document.documentElement.lang = 'en';
+    } else if (currentPage === 'legal') {
+      document.title = 'Términos y Condiciones y Política de Cookies | Avance Global Cup';
+      document.documentElement.lang = 'es';
+    }
+  }, [currentPage]);
 
   const navigateTo = (page: string) => {
     setCurrentPage(page);

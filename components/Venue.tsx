@@ -62,8 +62,8 @@ const Venue: React.FC = () => {
                 <div ref={imagesRef} className={`reveal ${isImagesVisible ? 'visible' : ''} mt-16`} style={{transitionDelay: '200ms'}}>
                     <div className="scrolling-ribbon">
                         <div className="scrolling-ribbon-content">
-                            {venueImages.map((src, index) => <img key={`img1-${index}`} src={src} alt={`Venue image ${index + 1}`} className="h-[250px]" />)}
-                            {venueImages.map((src, index) => <img key={`img2-${index}`} src={src} alt={`Venue image ${index + 1}`} className="h-[250px]" />)}
+                            {venueImages.map((src, index) => <img key={`img1-${index}`} src={src} alt={`The Embassy training facility in Málaga, photo ${index + 1}`} className="h-[250px]" />)}
+                            {venueImages.map((src, index) => <img key={`img2-${index}`} src={src} alt={`The Embassy training facility in Málaga, photo ${index + 1}`} className="h-[250px]" />)}
                         </div>
                     </div>
                 </div>
