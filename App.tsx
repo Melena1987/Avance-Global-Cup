@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import Overview from './components/Overview';
 import Teams from './components/Teams';
 import Venue from './components/Venue';
 import EventDetails from './components/EventDetails';
+import Offer from './components/Offer';
 import Footer from './components/Footer';
 import LegalPage from './components/LegalPage';
 import CookieBanner from './components/CookieBanner';
@@ -22,9 +24,11 @@ const App: React.FC = () => {
       {currentPage === 'main' ? (
         <main>
           <Hero />
+          <Overview />
           <Teams />
           <EventDetails />
           <Venue />
+          <Offer />
         </main>
       ) : (
         <LegalPage navigateTo={navigateTo} />

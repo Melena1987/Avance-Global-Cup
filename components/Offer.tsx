@@ -3,7 +3,7 @@ import useOnScreen from './useOnScreen';
 
 const CheckListItem: React.FC<{ children: React.ReactNode }> = ({ children }) => (
     <li className="flex items-start">
-        <svg className="w-6 h-6 text-green-400 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
+        <svg className="w-6 h-6 text-green-400 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
         <span className="text-gray-300">{children}</span>
     </li>
 );
@@ -15,7 +15,7 @@ const Offer: React.FC = () => {
     const isImageVisible = useOnScreen(imageRef);
 
     return (
-        <section id="offer" className="py-20 bg-[#222a35] overflow-hidden">
+        <section id="offer" className="py-20 bg-[#1a202c] overflow-hidden">
             <div className="container mx-auto px-6">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     <div ref={textRef} className={`reveal ${isTextVisible ? 'visible' : ''}`}>
@@ -37,9 +37,14 @@ const Offer: React.FC = () => {
                             <CheckListItem>VIP access to all AVANCE Global Spain sessions & events</CheckListItem>
                             <CheckListItem>Teams must provide international travel and medical insurance</CheckListItem>
                         </ul>
+                         <img 
+                            src="https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761961521665_avance_cup_embassy_logo_white.png?alt=media&token=a3b2c1d4-5e2f-3a9b-8c6d-7e4f1d0a2b8c" 
+                            alt="Avance Global Cup powered by The Embassy" 
+                            className="mt-10 h-14 w-auto"
+                        />
                     </div>
                     <div ref={imageRef} className={`reveal ${isImageVisible ? 'visible' : ''} w-full h-full min-h-[500px] rounded-lg overflow-hidden shadow-2xl`} style={{transitionDelay: '200ms'}}>
-                        <img src="https://picsum.photos/600/800?image=106" alt="Basketball player in action" className="w-full h-full object-cover"/>
+                        <img src="https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761961424177_action_shot_vertical.jpg?alt=media&token=c2c1b4d5-6e3f-4a0b-9c7d-8e5f2d1a3b9c" alt="Basketball player in action" className="w-full h-full object-cover"/>
                     </div>
                 </div>
             </div>
