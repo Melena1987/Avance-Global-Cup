@@ -42,12 +42,20 @@ const EventDetails: React.FC = () => {
                     </div>
                      <div className={`reveal ${isVisible ? 'visible' : ''}`} style={{transitionDelay: '200ms'}}>
                         <DetailCard title="Complete Experience" description="A weekend of basketball complemented by fan activations and entertainment, creating an unforgettable experience beyond the court.">
-                           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-2.236 9.168-5.5"></path></svg>
+                           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" />
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2 12H22" />
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 2C14.7614 2 17 6.47715 17 12C17 17.5228 14.7614 22 12 22" />
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 2C9.23858 2 7 6.47715 7 12C7 17.5228 9.23858 22 12 22" />
+                            </svg>
                         </DetailCard>
                     </div>
                      <div className={`reveal ${isVisible ? 'visible' : ''}`} style={{transitionDelay: '400ms'}}>
                         <DetailCard title="Global Reach" description="The event will be broadcast globally via streaming, bringing the action to fans worldwide.">
-                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9V3m0 18a9 9 0 01-9-9m-9 9a9 9 0 019-9"></path></svg>
+                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.25 9.75h17.5M3.25 14.25h17.5M9.75 3.25c1.5-1.5 4.5-1.5 6 0M14.25 20.75c-1.5 1.5-4.5 1.5-6 0"></path>
+                            </svg>
                         </DetailCard>
                     </div>
                 </div>
