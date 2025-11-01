@@ -34,7 +34,7 @@ const Footer: React.FC<FooterProps> = ({ navigateTo }) => {
                     <span className="font-bold text-gray-200">Website:</span> <a href="http://www.avanceglobalcup.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 transition-colors">www.avanceglobalcup.com</a>
                 </p>
                 <p>
-                    <span className="font-bold text-gray-200">Phone:</span> <a href="tel:+16198509247" className="text-gray-300 hover:text-blue-400 transition-colors">(619) 850-9247</a>
+                    <span className="font-bold text-gray-200">Phone:</span> <a href="tel:+16198509247" className="text-gray-300 hover:text-blue-400 transition-colors">+1 (619) 850-9247</a>
                 </p>
             </div>
           </div>

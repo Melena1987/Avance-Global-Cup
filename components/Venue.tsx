@@ -47,16 +47,18 @@ const Venue: React.FC = () => {
                             </li>
                         ))}
                     </ul>
-                     <div className="bg-[#222a35] p-6 rounded-lg border border-gray-700">
-                        <img 
-                            src="https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761947263093_Logo_THE_EMBBASSY_BLANCO_SIN_FONDO_400x400.png?alt=media&token=31d65c7b-9097-4fa6-a1b9-5aea3d115ff3" 
-                            alt="The Embassy Logo"
-                            className="h-10 w-auto mb-4"
-                        />
-                        <p className="text-gray-300 leading-relaxed">
-                            <span className="font-bold text-white">The Embassy</span>, is an elite center co-founded by former professional players José Manuel Calderón and Berni Rodríguez. National teams like USA, Spain, and Germany, along with NBA stars such as Jimmy Butler, Donovan Mitchell, Jaylen Brown, and Karl-Anthony Towns have used its state-of-the-art facilities for their training.
-                        </p>
-                    </div>
+                    <a href="https://www.theembassytc.com/" target="_blank" rel="noopener noreferrer" className="block" aria-label="Visit The Embassy website">
+                        <div className="bg-[#222a35] p-6 rounded-lg border border-gray-700 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:border-blue-400">
+                            <img 
+                                src="https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761947263093_Logo_THE_EMBBASSY_BLANCO_SIN_FONDO_400x400.png?alt=media&token=31d65c7b-9097-4fa6-a1b9-5aea3d115ff3" 
+                                alt="The Embassy Logo"
+                                className="h-10 w-auto mb-4"
+                            />
+                            <p className="text-gray-300 leading-relaxed">
+                                <span className="font-bold text-white">The Embassy</span>, is an elite center co-founded by former professional players José Manuel Calderón and Berni Rodríguez. National teams like USA, Spain, and Germany, along with NBA stars such as Jimmy Butler, Donovan Mitchell, Jaylen Brown, and Karl-Anthony Towns have used its state-of-the-art facilities for their training.
+                            </p>
+                        </div>
+                    </a>
                 </div>
                 
                 <div ref={imagesRef} className={`reveal ${isImagesVisible ? 'visible' : ''} mt-16`} style={{transitionDelay: '200ms'}}>
