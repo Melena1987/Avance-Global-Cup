@@ -14,6 +14,21 @@ const Footer: React.FC<FooterProps> = ({ navigateTo }) => {
   return (
     <footer id="contact" className="bg-[#151f28] border-t border-gray-800 py-12">
       <div className="container mx-auto px-6 text-gray-400">
+        
+        <div className="text-center mb-12 pb-12 border-b border-gray-700">
+            <h3 className="text-2xl font-bold text-white mb-3">Interested in Partnership?</h3>
+            <p className="text-gray-400 mb-6 max-w-xl mx-auto">
+                Elevate your brand by joining a premier international event that unites sports, business, and culture.
+            </p>
+            <a 
+                href="/partner" 
+                onClick={(e) => handleNavClick(e, 'partner')}
+                className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+            >
+                Explore Opportunities
+            </a>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
           
           {/* Column 1: Logo & Event Info */}

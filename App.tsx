@@ -63,7 +63,7 @@ const App: React.FC = () => {
           <main>
             <Hero />
             <Overview />
-            <Teams />
+            <Teams navigateTo={navigateTo} />
             <EventDetails />
             <Venue />
             <Offer />
