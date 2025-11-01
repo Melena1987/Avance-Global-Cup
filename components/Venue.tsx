@@ -25,6 +25,18 @@ const Venue: React.FC = () => {
         "https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761950147664_TheEmbassyTC-imagen_050_400x400.jpg?alt=media&token=91bbf74f-6cad-4f7c-9bfb-8c020278973a"
     ];
 
+    const nbaPlayerImages = [
+        "https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1757441458744_THE_EMBASSY_FUENGIROLA_NBA_17_400x400.jpg?alt=media&token=0d3eb2f2-cd14-4556-b34b-26d74e0fb9b5",
+        "https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1757441458744_THE_EMBASSY_FUENGIROLA_NBA_2_400x400.jpg?alt=media&token=b778b075-0e9d-4570-90c0-305816fb9013",
+        "https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1757441458744_THE_EMBASSY_FUENGIROLA_NBA_7_400x400.jpg?alt=media&token=4b14dd46-2afb-442d-a587-268ec616f7b1",
+        "https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1757441458744_THE_EMBASSY_FUENGIROLA_NBA_6_400x400.jpg?alt=media&token=8d895be0-7f9e-4d48-9dc0-eb985e4f1e9d",
+        "https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1757441458744_THE_EMBASSY_FUENGIROLA_NBA_11_400x400.jpg?alt=media&token=a8551539-61ab-49f6-819e-d44b1c62a66e",
+        "https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1757441458744_THE_EMBASSY_FUENGIROLA_NBA_22_400x400.jpg?alt=media&token=1e65a61c-36af-4c7c-a97f-13f42e262162",
+        "https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1757441458744_THE_EMBASSY_FUENGIROLA_NBA_8_400x400.jpg?alt=media&token=99c6d5be-eb4d-44df-b53a-23e82f94d2c7",
+        "https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1757441458744_THE_EMBASSY_FUENGIROLA_NBA_5_400x400.jpg?alt=media&token=981772f4-a9e7-4d52-ab38-811224ca1157",
+        "https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1757441458744_THE_EMBASSY_FUENGIROLA_NBA_19_400x400.jpg?alt=media&token=86997450-50f8-4c5e-b6fd-90884f131c75"
+    ];
+
     const textRef = useRef<HTMLDivElement>(null);
     const imagesRef = useRef<HTMLDivElement>(null);
     const isTextVisible = useOnScreen(textRef);
@@ -73,11 +85,29 @@ const Venue: React.FC = () => {
                 </div>
                 
                 <div ref={imagesRef} className={`reveal ${isImagesVisible ? 'visible' : ''} mt-16`} style={{transitionDelay: '200ms'}}>
-                    <div className="scrolling-ribbon">
-                        <div className="scrolling-ribbon-content">
-                            {venueImages.map((src, index) => <img key={`img1-${index}`} src={src} alt={`The Embassy training facility in Málaga, photo ${index + 1}`} className="h-[250px]" />)}
-                            {venueImages.map((src, index) => <img key={`img2-${index}`} src={src} alt={`The Embassy training facility in Málaga, photo ${index + 1}`} className="h-[250px]" />)}
+                    <div className="space-y-4">
+                        <div className="scrolling-ribbon">
+                            <div className="scrolling-ribbon-content">
+                                {venueImages.map((src, index) => <img key={`img1-${index}`} src={src} alt={`The Embassy training facility in Málaga, photo ${index + 1}`} className="h-[250px]" />)}
+                                {venueImages.map((src, index) => <img key={`img2-${index}`} src={src} alt={`The Embassy training facility in Málaga, photo ${index + 1}`} className="h-[250px]" />)}
+                            </div>
                         </div>
+                        <div className="scrolling-ribbon">
+                            <div className="scrolling-ribbon-content reverse">
+                                {nbaPlayerImages.map((src, index) => <img key={`nba1-${index}`} src={src} alt={`NBA players at The Embassy, photo ${index + 1}`} className="h-[250px]" />)}
+                                {nbaPlayerImages.map((src, index) => <img key={`nba2-${index}`} src={src} alt={`NBA players at The Embassy, photo ${index + 1}`} className="h-[250px]" />)}
+                            </div>
+                        </div>
+                    </div>
+                    <div className="text-center mt-12">
+                        <a
+                            href="https://www.theembassytc.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                        >
+                            Discover THE EMBASSY
+                        </a>
                     </div>
                 </div>
             </div>

@@ -46,6 +46,10 @@
         0% { transform: translateX(0); }
         100% { transform: translateX(-50%); }
       }
+      @keyframes scroll-reverse {
+        0% { transform: translateX(-50%); }
+        100% { transform: translateX(0); }
+      }
       .scrolling-ribbon {
         overflow: hidden;
         position: relative;
@@ -57,6 +61,9 @@
         display: flex;
         width: 200%; /* Because we duplicate the images */
         animation: scroll 45s linear infinite;
+      }
+      .scrolling-ribbon-content.reverse {
+        animation-name: scroll-reverse;
       }
        .scrolling-ribbon-content:hover {
         animation-play-state: paused;
