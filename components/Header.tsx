@@ -34,6 +34,7 @@ const Header: React.FC<HeaderProps> = ({ navigateTo, currentPage }) => {
     { href: '#event', label: 'Event' },
     { href: '#venue', label: 'Venue' },
     { href: '#offer', label: 'Offer' },
+    { href: '#gallery-preview', label: 'Gallery' },
     { href: '#contact', label: 'Contact' },
   ];
   

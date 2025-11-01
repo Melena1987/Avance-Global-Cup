@@ -6,6 +6,7 @@ import Teams from './components/Teams';
 import Venue from './components/Venue';
 import EventDetails from './components/EventDetails';
 import Offer from './components/Offer';
+import GalleryPreview from './components/GalleryPreview';
 import Footer from './components/Footer';
 import LegalPage from './components/LegalPage';
 import CookieBanner from './components/CookieBanner';
@@ -71,6 +72,7 @@ const App: React.FC = () => {
             <EventDetails />
             <Venue />
             <Offer />
+            <GalleryPreview navigateTo={navigateTo} />
           </main>
         );
     }
