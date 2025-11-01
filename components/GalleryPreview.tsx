@@ -6,12 +6,13 @@ interface GalleryPreviewProps {
 }
 
 const galleryImages = [
-    "https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761945946387_AVANCE_BASKETBALL_SanDiego_D2-12.jpg?alt=media&token=528b931d-8ae2-44b7-af4e-a2cf197a42b9",
-    "https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761945821047_AVANCE_BASKETBALL_57.jpg?alt=media&token=ac5097fb-5f0f-41fa-a46c-d97770835c3a",
-    "https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761945946387_AVANCE_BASKETBALL_SanDiego_D2-30.jpg?alt=media&token=a060537d-4372-47a9-96f4-1fd3e0d0cc93",
-    "https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761945821047_AVANCE_BASKETBALL_42.jpg?alt=media&token=f9981e01-d2d5-4d21-a9f3-1e5edb341f65",
-    "https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761994360612_AVANCE_BASKETBALL_SanDiego_F_2.jpg?alt=media&token=98e66d3d-adb4-4400-bdcc-a26767a9bdd1",
-    "https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761945946387_AVANCE_BASKETBALL_SanDiego_D2-70.jpg?alt=media&token=a4f8464d-afbb-4d61-9958-b60e9ea269af"
+    "https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761997473781_AVANCE_BASKETBALL_SanDiego_F_12_400x400.jpg?alt=media&token=d37c49cf-cdc9-43f0-bf43-0b36cee6ae77",
+    "https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761997253318_AVANCE_BASKETBALL_SanDiego_D2-91_400x400.jpg?alt=media&token=efd992b0-ef69-4787-ace0-c527a96a7729",
+    "https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761997253318_AVANCE_BASKETBALL_SanDiego_D2-62_400x400.jpg?alt=media&token=a634127c-5d4d-4067-8c61-d181fb63533b",
+    "https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761997253318_AVANCE_BASKETBALL_SanDiego_D2-10_400x400.jpg?alt=media&token=92036f77-b135-48b9-a6d5-750860328e94",
+    "https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761997253318_AVANCE_BASKETBALL_SanDiego_D2-15_400x400.jpg?alt=media&token=78fa7272-e8a2-4c20-805b-cbd4ca13ec08",
+    "https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761997253318_AVANCE_BASKETBALL_SanDiego_D2-74_400x400.jpg?alt=media&token=9006aecb-2f42-4593-9c0e-3040b97a0543",
+    "https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761997253318_AVANCE_BASKETBALL_SanDiego_D2-56_400x400.jpg?alt=media&token=041b1879-d32c-4c83-ae60-29f868816c7a"
 ];
 
 const GalleryPreview: React.FC<GalleryPreviewProps> = ({ navigateTo }) => {
