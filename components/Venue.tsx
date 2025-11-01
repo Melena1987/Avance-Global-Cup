@@ -88,14 +88,14 @@ const Venue: React.FC = () => {
                     <div className="space-y-4">
                         <div className="scrolling-ribbon">
                             <div className="scrolling-ribbon-content">
-                                {venueImages.map((src, index) => <img key={`img1-${index}`} src={src} alt={`The Embassy training facility in Málaga, photo ${index + 1}`} className="h-[250px]" />)}
-                                {venueImages.map((src, index) => <img key={`img2-${index}`} src={src} alt={`The Embassy training facility in Málaga, photo ${index + 1}`} className="h-[250px]" />)}
+                                {venueImages.map((src, index) => <img key={`img1-${index}`} src={src} alt={`The Embassy training facility in Málaga, photo ${index + 1}`} className="h-[250px] w-[250px] object-cover" />)}
+                                {venueImages.map((src, index) => <img key={`img2-${index}`} src={src} alt={`The Embassy training facility in Málaga, photo ${index + 1}`} className="h-[250px] w-[250px] object-cover" />)}
                             </div>
                         </div>
                         <div className="scrolling-ribbon">
                             <div className="scrolling-ribbon-content reverse">
-                                {nbaPlayerImages.map((src, index) => <img key={`nba1-${index}`} src={src} alt={`NBA players at The Embassy, photo ${index + 1}`} className="h-[250px]" />)}
-                                {nbaPlayerImages.map((src, index) => <img key={`nba2-${index}`} src={src} alt={`NBA players at The Embassy, photo ${index + 1}`} className="h-[250px]" />)}
+                                {nbaPlayerImages.map((src, index) => <img key={`nba1-${index}`} src={src} alt={`NBA players at The Embassy, photo ${index + 1}`} className="h-[250px] w-[250px] object-cover" />)}
+                                {nbaPlayerImages.map((src, index) => <img key={`nba2-${index}`} src={src} alt={`NBA players at The Embassy, photo ${index + 1}`} className="h-[250px] w-[250px] object-cover" />)}
                             </div>
                         </div>
                     </div>

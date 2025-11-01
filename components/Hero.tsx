@@ -90,7 +90,7 @@ const Hero: React.FC = () => {
               {[...teamLogos, ...teamLogos].map((logo, index) => {
                   const isSpecialLogo = logo.name === 'NBA Academy Africa' || logo.name === 'The Program';
                   return (
-                      <div key={`${logo.name}-${index}`} title={logo.name} className="flex-shrink-0 mx-6 flex items-center justify-center transition-transform duration-300 ease-in-out hover:scale-110">
+                      <div key={`${logo.name}-${index}`} title={logo.name} className="flex-shrink-0 w-20 mx-6 flex items-center justify-center transition-transform duration-300 ease-in-out hover:scale-110">
                           <img 
                             src={logo.url} 
                             alt={`${logo.name} logo`} 

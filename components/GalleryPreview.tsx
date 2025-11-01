@@ -39,7 +39,7 @@ const GalleryPreview: React.FC<GalleryPreviewProps> = ({ navigateTo }) => {
                                 key={`gallery-img-${index}`} 
                                 src={src} 
                                 alt={`Avance Global Cup 2024 highlight ${index + 1}`} 
-                                className="h-[250px] object-cover" 
+                                className="h-[250px] w-[250px] object-cover" 
                             />
                         ))}
                     </div>
