@@ -20,17 +20,14 @@ const Hero: React.FC = () => {
   return (
     <section 
         id="home" 
-        className="relative grid text-white"
-    >
-      <div 
-        className="col-start-1 row-start-1 w-full h-full bg-cover bg-center bg-fixed"
+        className="relative text-white bg-cover bg-center md:bg-fixed"
         style={{ backgroundImage: "url('https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761945946387_AVANCE_BASKETBALL_SanDiego_D2-12.jpg?alt=media&token=528b931d-8ae2-44b7-af4e-a2cf197a42b9')" }}
-      ></div>
-      <div className="col-start-1 row-start-1 w-full h-full bg-black/60"></div>
+    >
+      <div className="absolute inset-0 bg-black/60" aria-hidden="true"></div>
       
-      <div className="relative z-10 col-start-1 row-start-1 container mx-auto px-6 pt-40 pb-20">
+      <div className="relative z-10 container mx-auto px-6 pt-24 sm:pt-32 md:pt-40 pb-12 md:pb-20">
         
-        <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center mb-12">
             {/* Left Column: Main Info */}
             <div className="text-center md:text-left">
                 <img 
@@ -56,7 +53,7 @@ const Hero: React.FC = () => {
                 </p>
             </div>
             {/* Right Column: Event Details Card */}
-            <div className="flex justify-center md:justify-end">
+            <div className="flex justify-center md:justify-end mt-8 md:mt-0">
                 <div className="w-full max-w-md bg-gray-900/30 backdrop-blur-sm border border-white/20 rounded-lg p-6 md:p-8 shadow-xl space-y-4">
                     <a href={googleCalendarUrl} target="_blank" rel="noopener noreferrer" aria-label="Add to Google Calendar" className="block transition-transform duration-300 ease-in-out hover:scale-105">
                         <div className="flex items-center">
