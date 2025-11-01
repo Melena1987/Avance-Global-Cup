@@ -113,7 +113,7 @@ const PartnerPage: React.FC<PartnerPageProps> = ({ navigateTo }) => {
         </section>
 
         <Vision />
-        <Impact />
+        <Impact navigateTo={navigateTo} />
 
         <section 
             id="sponsorship-opportunities" 

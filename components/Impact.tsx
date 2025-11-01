@@ -15,9 +15,18 @@ const StatCard: React.FC<StatCardProps> = ({ value, title, description }) => (
     </div>
 );
 
-const Impact: React.FC = () => {
+interface ImpactProps {
+  navigateTo: (page: string) => void;
+}
+
+const Impact: React.FC<ImpactProps> = ({ navigateTo }) => {
     const gridRef = useRef<HTMLDivElement>(null);
     const isVisible = useOnScreen(gridRef);
+
+    const handleGalleryClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+        e.preventDefault();
+        navigateTo('gallery');
+    };
 
     return (
         <section id="impact" className="py-20 bg-[#1a202c] overflow-hidden">
@@ -46,6 +55,15 @@ const Impact: React.FC = () => {
                             description="Qualified public between the ages of 16-35 with high purchasing power." 
                         />
                     </div>
+                </div>
+                <div className="text-center mt-16">
+                    <a
+                        href="/gallery"
+                        onClick={handleGalleryClick}
+                        className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                    >
+                        View 2024 Official Gallery
+                    </a>
                 </div>
             </div>
         </section>

@@ -32,7 +32,7 @@ const Footer: React.FC<FooterProps> = ({ navigateTo }) => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
           
           {/* Column 1: Logo & Event Info */}
-          <div className="md:col-span-4 flex flex-col items-center md:items-start">
+          <div className="md:col-span-3 flex flex-col items-center md:items-start">
             <a href="/" onClick={(e) => handleNavClick(e, 'main')} className="cursor-pointer" aria-label="Go to homepage">
               <img 
                 src="https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761946347121_avance_global_cup_logo.png?alt=media&token=b4d7d75a-dc46-436c-b5c5-81edd0ba6154" 
@@ -43,8 +43,18 @@ const Footer: React.FC<FooterProps> = ({ navigateTo }) => {
             <p className="mt-4 text-center md:text-left">Málaga, Spain | January 29 to 31, 2026</p>
           </div>
 
-          {/* Column 2: Contact Info */}
-          <div className="md:col-span-5 text-center md:text-left">
+          {/* Column 2: Quick Links */}
+          <div className="md:col-span-3 text-center md:text-left">
+             <h3 className="text-xl font-bold text-white mb-4">Quick Links</h3>
+             <ul className="space-y-2">
+                <li><a href="/" onClick={(e) => handleNavClick(e, 'main')} className="text-gray-300 hover:text-blue-400 transition-colors">Home</a></li>
+                <li><a href="/partner" onClick={(e) => handleNavClick(e, 'partner')} className="text-gray-300 hover:text-blue-400 transition-colors">Be a Partner</a></li>
+                <li><a href="/gallery" onClick={(e) => handleNavClick(e, 'gallery')} className="text-gray-300 hover:text-blue-400 transition-colors">Gallery 2024</a></li>
+             </ul>
+          </div>
+
+          {/* Column 3: Contact Info */}
+          <div className="md:col-span-4 text-center md:text-left">
             <h3 className="text-xl font-bold text-white mb-4">Contact Information</h3>
             <div className="space-y-2 text-base">
                 <p className="text-gray-200">
@@ -62,8 +72,8 @@ const Footer: React.FC<FooterProps> = ({ navigateTo }) => {
             </div>
           </div>
           
-          {/* Column 3: Social Media */}
-          <div className="md:col-span-3 flex flex-col items-center md:items-end">
+          {/* Column 4: Social Media */}
+          <div className="md:col-span-2 flex flex-col items-center md:items-end">
             <h3 className="text-xl font-bold text-white mb-4">Follow Us</h3>
             <div className="flex justify-center space-x-6">
                 <a href="https://www.instagram.com/avancebasketballcup_/" target="_blank" rel="noopener noreferrer" className="group">
