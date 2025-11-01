@@ -18,8 +18,8 @@ const App: React.FC = () => {
       document.title = 'Avance Global Basketball Cup';
       document.documentElement.lang = 'en';
     } else if (currentPage === 'legal') {
-      document.title = 'Términos y Condiciones y Política de Cookies | Avance Global Cup';
-      document.documentElement.lang = 'es';
+      document.title = 'Terms and Conditions & Cookie Policy | Avance Global Cup';
+      document.documentElement.lang = 'en';
     }
   }, [currentPage]);
 

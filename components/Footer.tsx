@@ -57,7 +57,7 @@ const Footer: React.FC<FooterProps> = ({ navigateTo }) => {
         <div className="mt-10 pt-6 border-t border-gray-700 flex flex-col sm:flex-row justify-between items-center text-sm">
             <p className="order-2 sm:order-1 mt-4 sm:mt-0">&copy; {new Date().getFullYear()} AVANCE Global. All rights reserved.</p>
             <button onClick={() => navigateTo('legal')} className="order-1 sm:order-2 text-gray-400 hover:text-white transition-colors duration-200">
-                Términos y Condiciones y Política de Cookies
+                Terms and Conditions & Cookie Policy
             </button>
         </div>
       </div>

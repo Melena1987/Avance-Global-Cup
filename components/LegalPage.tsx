@@ -9,46 +9,46 @@ const LegalPage: React.FC<LegalPageProps> = ({ navigateTo }) => {
     <section className="py-24 pt-40 bg-[#1a202c]">
       <div className="container mx-auto px-6 text-gray-300 max-w-4xl">
         <button onClick={() => navigateTo('main')} className="mb-8 text-blue-400 hover:text-blue-300 transition-colors">
-          &larr; Volver a la página principal
+          &larr; Back to main page
         </button>
 
-        <h1 className="text-4xl font-extrabold text-white mb-8">Términos y Condiciones y Política de Cookies</h1>
+        <h1 className="text-4xl font-extrabold text-white mb-8">Terms and Conditions & Cookie Policy</h1>
 
         <div className="space-y-12">
           <div>
-            <h2 className="text-3xl font-bold text-white mb-4">Términos y Condiciones</h2>
+            <h2 className="text-3xl font-bold text-white mb-4">Terms and Conditions</h2>
             <div className="space-y-4 prose prose-invert text-gray-300">
-              <p>Última actualización: {new Date().toLocaleDateString()}</p>
-              <p>Bienvenido al sitio web de Avance Global Basketball Cup. Al acceder y utilizar este sitio web, usted acepta cumplir y estar sujeto a los siguientes términos y condiciones de uso. Si no está de acuerdo con alguna parte de estos términos, no debe utilizar nuestro sitio web.</p>
+              <p>Last updated: {new Date().toLocaleDateString('en-US')}</p>
+              <p>Welcome to the Avance Global Basketball Cup website. By accessing and using this website, you agree to comply with and be bound by the following terms and conditions of use. If you disagree with any part of these terms, you must not use our website.</p>
               
-              <h3 className="text-xl font-semibold text-white">1. Propiedad Intelectual</h3>
-              <p>El contenido de este sitio, incluyendo textos, gráficos, logos, e imágenes, es propiedad de AVANCE Global y está protegido por las leyes de derechos de autor. Queda prohibida la reproducción, distribución o modificación no autorizada de cualquier material sin nuestro consentimiento previo por escrito.</p>
+              <h3 className="text-xl font-semibold text-white">1. Intellectual Property</h3>
+              <p>The content of this site, including text, graphics, logos, and images, is the property of AVANCE Global and is protected by copyright laws. Unauthorized reproduction, distribution, or modification of any material without our prior written consent is prohibited.</p>
 
-              <h3 className="text-xl font-semibold text-white">2. Uso del Sitio Web</h3>
-              <p>Este sitio web tiene fines informativos sobre el evento Avance Global Cup 2026. Usted se compromete a no utilizar el sitio para ningún propósito ilegal o que pueda dañar la reputación del evento o de sus organizadores.</p>
+              <h3 className="text-xl font-semibold text-white">2. Website Use</h3>
+              <p>This website is for informational purposes about the Avance Global Cup 2026 event. You agree not to use the site for any unlawful purpose or in any way that could harm the reputation of the event or its organizers.</p>
 
-              <h3 className="text-xl font-semibold text-white">3. Exclusión de Responsabilidad</h3>
-              <p>La información en este sitio web se proporciona "tal cual", sin garantías de ningún tipo. Aunque nos esforzamos por mantener la información actualizada y correcta, no garantizamos su integridad o exactitud. AVANCE Global no será responsable de ninguna pérdida o daño derivado del uso de este sitio.</p>
+              <h3 className="text-xl font-semibold text-white">3. Disclaimer of Liability</h3>
+              <p>The information on this website is provided "as is," without any warranties. While we strive to keep the information up-to-date and correct, we do not guarantee its completeness or accuracy. AVANCE Global will not be liable for any loss or damage arising from the use of this site.</p>
 
-              <h3 className="text-xl font-semibold text-white">4. Ley Aplicable</h3>
-              <p>Estos términos y condiciones se regirán e interpretarán de acuerdo con las leyes de España, y cualquier disputa estará sujeta a la jurisdicción exclusiva de los tribunales de Málaga.</p>
+              <h3 className="text-xl font-semibold text-white">4. Governing Law</h3>
+              <p>These terms and conditions will be governed by and construed in accordance with the laws of Spain, and any disputes will be subject to the exclusive jurisdiction of the courts of Málaga.</p>
             </div>
           </div>
 
           <div>
-            <h2 className="text-3xl font-bold text-white mb-4">Política de Cookies</h2>
+            <h2 className="text-3xl font-bold text-white mb-4">Cookie Policy</h2>
             <div className="space-y-4 prose prose-invert text-gray-300">
-              <p>Este sitio web utiliza cookies para mejorar su experiencia de usuario. Una cookie es un pequeño archivo de texto que se almacena en su navegador.</p>
+              <p>This website uses cookies to enhance your user experience. A cookie is a small text file stored on your browser.</p>
               
-              <h3 className="text-xl font-semibold text-white">1. ¿Qué cookies utilizamos?</h3>
-              <p><strong>Cookies Esenciales:</strong> Utilizamos cookies que son estrictamente necesarias para el funcionamiento del sitio web. Por ejemplo, utilizamos una cookie para recordar su consentimiento sobre nuestra política de cookies.</p>
-              <p><strong>Cookies de Terceros:</strong> No utilizamos cookies de análisis, marketing o de terceros en este momento. Si esto cambia en el futuro, actualizaremos esta política.</p>
+              <h3 className="text-xl font-semibold text-white">1. What cookies do we use?</h3>
+              <p><strong>Essential Cookies:</strong> We use cookies that are strictly necessary for the website to function. For example, we use a cookie to remember your consent to our cookie policy.</p>
+              <p><strong>Third-Party Cookies:</strong> We do not currently use analytics, marketing, or other third-party cookies. If this changes in the future, we will update this policy.</p>
 
-              <h3 className="text-xl font-semibold text-white">2. ¿Cómo gestionar las cookies?</h3>
-              <p>Al visitar nuestro sitio por primera vez, se le presentará un banner de consentimiento de cookies. Puede aceptar el uso de cookies para ocultar este banner en futuras visitas. También puede gestionar y eliminar cookies a través de la configuración de su navegador web. Tenga en cuenta que deshabilitar las cookies esenciales puede afectar la funcionalidad del sitio.</p>
+              <h3 className="text-xl font-semibold text-white">2. How to manage cookies?</h3>
+              <p>When you first visit our site, you will be presented with a cookie consent banner. You can accept the use of cookies to hide this banner on future visits. You can also manage and delete cookies through your web browser settings. Please note that disabling essential cookies may affect the site's functionality.</p>
               
-              <h3 className="text-xl font-semibold text-white">3. Contacto</h3>
-              <p>Si tiene alguna pregunta sobre nuestros términos o nuestra política de cookies, puede contactarnos a través de la información proporcionada en la sección de contacto de este sitio web.</p>
+              <h3 className="text-xl font-semibold text-white">3. Contact</h3>
+              <p>If you have any questions about our terms or cookie policy, you can contact us using the information provided in the contact section of this website.</p>
             </div>
           </div>
         </div>

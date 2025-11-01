@@ -27,16 +27,16 @@ const CookieBanner: React.FC<CookieBannerProps> = ({ navigateTo }) => {
     <div className="fixed bottom-0 left-0 right-0 bg-[#1a202c]/95 backdrop-blur-sm p-4 z-50 border-t border-gray-700">
       <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
         <p className="text-sm text-gray-300 text-center sm:text-left">
-          Este sitio web utiliza cookies para garantizar que obtenga la mejor experiencia. Al continuar, usted acepta nuestro uso de cookies. Para más información, consulte nuestra{' '}
+          This website uses cookies to ensure you get the best experience. By continuing, you agree to our use of cookies. For more information, see our{' '}
           <button onClick={() => navigateTo('legal')} className="text-blue-400 hover:underline">
-            Política de Cookies
+            Cookie Policy
           </button>.
         </p>
         <button 
           onClick={handleAccept} 
           className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-200 flex-shrink-0"
         >
-          Aceptar
+          Accept
         </button>
       </div>
     </div>
