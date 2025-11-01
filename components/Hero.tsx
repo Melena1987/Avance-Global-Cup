@@ -49,7 +49,7 @@ const Hero: React.FC = () => {
                     />
                 </div>
                 <p className="text-base md:text-lg text-gray-300 leading-relaxed drop-shadow-md max-w-xl mx-auto md:mx-0">
-                    This is a worldwide competition for high school and junior basketball clubs. It is an unprecedented event that aims to redefine basketball development by bringing together tomorrow's elite players on a global stage.
+                    This is a worldwide competition for high school, academies and junior basketball clubs. It is an unprecedented event that aims to redefine basketball development by bringing together tomorrow's elite players on a global stage.
                 </p>
             </div>
             {/* Right Column: Event Details Card */}

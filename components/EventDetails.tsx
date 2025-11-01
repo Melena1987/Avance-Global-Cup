@@ -41,7 +41,7 @@ const EventDetails: React.FC = () => {
                         </DetailCard>
                     </div>
                      <div className={`reveal ${isVisible ? 'visible' : ''}`} style={{transitionDelay: '200ms'}}>
-                        <DetailCard title="Complete Experience" description="Fan Zone will be available, featuring brand activations, games, food trucks, live music, and official event merchandise.">
+                        <DetailCard title="Complete Experience" description="A weekend of basketball complemented by fan activations and entertainment, creating an unforgettable experience beyond the court.">
                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-2.236 9.168-5.5"></path></svg>
                         </DetailCard>
                     </div>

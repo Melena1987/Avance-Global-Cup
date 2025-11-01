@@ -29,7 +29,7 @@ const Offer: React.FC = () => {
                         
                         <h3 className="text-3xl font-bold text-white mb-6">Benefits to participating teams</h3>
                         <ul className="space-y-4">
-                            <CheckListItem>Travel allowance for the team (up to 18 people — 12 players minimum)</CheckListItem>
+                            <CheckListItem>Travel allowance for the team (up to 16 people — 12 players minimum)</CheckListItem>
                             <CheckListItem>Five nights of hotel accommodations (double occupancy)</CheckListItem>
                             <CheckListItem>All-inclusive resort — all meals covered</CheckListItem>
                             <CheckListItem>Ground transportation provided (teams are responsible for airfare)</CheckListItem>
