@@ -13,6 +13,9 @@ const Hero: React.FC = () => {
         { name: 'Veritas Academy', url: 'https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761946892702_v-ball_400x400.png?alt=media&token=8787e9fc-c7f5-487e-ab06-f6373cb60781' },
         { name: 'AUS Elite', url: 'https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761946892702_aus_elite_400x400.png?alt=media&token=9f2b6a5c-ded2-448d-adbb-caa2fc58a05c' },
     ];
+    
+    const googleCalendarUrl = `https://www.google.com/calendar/render?action=TEMPLATE&text=Avance%20Global%20Basketball%20Cup%202026&dates=20260129T090000/20260131T210000&location=The%20Embassy%20in%20Fuengirola%2C%20M%C3%A1laga%2C%20Spain&details=Join%20the%20Avance%20Global%20Basketball%20Cup%202026%20in%20M%C3%A1laga%2C%20Spain!%20An%20elite%20international%20tournament%20for%20high%20school%20and%20junior%20clubs.%20More%20info%20at%20https%3A%2F%2Fwww.avanceglobalcup.com%2F`;
+    const googleMapsUrl = `https://maps.app.goo.gl/VrtcZp7iWtcPDcfh7`;
 
   return (
     <section 
@@ -54,27 +57,31 @@ const Hero: React.FC = () => {
             </div>
             {/* Right Column: Event Details Card */}
             <div className="flex justify-center md:justify-end">
-                <div className="w-full max-w-md bg-gray-900/30 backdrop-blur-sm border border-white/20 rounded-lg p-6 md:p-8 shadow-xl">
-                    <div className="flex items-center mb-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 mr-4 text-blue-300 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                        </svg>
-                        <div>
-                            <p className="text-sm text-gray-400">Date</p>
-                            <span className="text-lg font-semibold text-gray-100">January 29 to 31, 2026</span>
+                <div className="w-full max-w-md bg-gray-900/30 backdrop-blur-sm border border-white/20 rounded-lg p-6 md:p-8 shadow-xl space-y-4">
+                    <a href={googleCalendarUrl} target="_blank" rel="noopener noreferrer" aria-label="Add to Google Calendar" className="block transition-transform duration-300 ease-in-out hover:scale-105">
+                        <div className="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 mr-4 text-blue-300 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                            <div>
+                                <p className="text-sm text-gray-400">Date</p>
+                                <span className="text-lg font-semibold text-gray-100">January 29 to 31, 2026</span>
+                            </div>
                         </div>
-                    </div>
-                    <div className="w-full h-px bg-white/20 my-4"></div>
-                    <div className="flex items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 mr-4 text-blue-300 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z" />
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                        </svg>
-                        <div>
-                            <p className="text-sm text-gray-400">Location</p>
-                            <span className="text-lg font-semibold text-gray-100">The Embassy in Fuengirola, Málaga, Spain</span>
+                    </a>
+                    <div className="w-full h-px bg-white/20"></div>
+                    <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer" aria-label="View location on Google Maps" className="block transition-transform duration-300 ease-in-out hover:scale-105">
+                        <div className="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 mr-4 text-blue-300 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z" />
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                            <div>
+                                <p className="text-sm text-gray-400">Location</p>
+                                <span className="text-lg font-semibold text-gray-100">The Embassy in Fuengirola, Málaga, Spain</span>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
