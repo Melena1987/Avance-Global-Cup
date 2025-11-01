@@ -10,7 +10,7 @@ interface DetailCardProps {
 const DetailCard: React.FC<DetailCardProps> = ({ title, description, children }) => (
     <div className="bg-[#222a35]/60 backdrop-blur-md p-8 rounded-lg border border-gray-700 shadow-xl h-full transition-transform duration-300 hover:scale-105">
         <div className="flex items-center mb-4">
-            <div className="w-12 h-12 bg-blue-500/20 text-blue-300 rounded-full flex items-center justify-center mr-4">
+            <div className="w-12 h-12 bg-blue-500/20 text-blue-300 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                 {children}
             </div>
             <h3 className="text-2xl font-bold text-white">{title}</h3>
