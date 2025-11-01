@@ -17,12 +17,15 @@ const Hero: React.FC = () => {
   return (
     <section 
         id="home" 
-        className="relative pt-40 pb-20 text-white bg-cover bg-center bg-fixed"
-        style={{ backgroundImage: "url('https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761945946387_AVANCE_BASKETBALL_SanDiego_D2-12.jpg?alt=media&token=528b931d-8ae2-44b7-af4e-a2cf197a42b9')" }}
+        className="relative grid text-white"
     >
-      <div className="absolute inset-0 bg-black/60"></div>
+      <div 
+        className="col-start-1 row-start-1 w-full h-full bg-cover bg-center bg-fixed"
+        style={{ backgroundImage: "url('https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761945946387_AVANCE_BASKETBALL_SanDiego_D2-12.jpg?alt=media&token=528b931d-8ae2-44b7-af4e-a2cf197a42b9')" }}
+      ></div>
+      <div className="col-start-1 row-start-1 w-full h-full bg-black/60"></div>
       
-      <div className="relative z-10 container mx-auto px-6">
+      <div className="relative z-10 col-start-1 row-start-1 container mx-auto px-6 pt-40 pb-20">
         
         <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
             {/* Left Column: Main Info */}

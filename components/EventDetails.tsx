@@ -26,9 +26,13 @@ const EventDetails: React.FC = () => {
     const isVisible = useOnScreen(gridRef);
     
     return (
-        <section id="event" className="py-20 bg-cover bg-center bg-fixed" style={{ backgroundImage: "url('https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761945946387_AVANCE_BASKETBALL_SanDiego_D2-30.jpg?alt=media&token=a060537d-4372-47a9-96f4-1fd3e0d0cc93')" }}>
-             <div className="absolute inset-0 bg-[#1a202c] opacity-80"></div>
-            <div className="container mx-auto px-6 relative z-10">
+        <section id="event" className="relative grid">
+            <div 
+                className="col-start-1 row-start-1 w-full h-full bg-cover bg-center bg-fixed"
+                style={{ backgroundImage: "url('https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761945946387_AVANCE_BASKETBALL_SanDiego_D2-30.jpg?alt=media&token=a060537d-4372-47a9-96f4-1fd3e0d0cc93')" }}
+            ></div>
+            <div className="col-start-1 row-start-1 w-full h-full bg-[#1a202c] opacity-80"></div>
+            <div className="container mx-auto px-6 relative z-10 col-start-1 row-start-1 py-20">
                 <h2 className="text-4xl font-extrabold text-white text-center mb-12">The Event: Beyond the game</h2>
                 <div ref={gridRef} className="grid md:grid-cols-3 gap-8">
                     <div className={`reveal ${isVisible ? 'visible' : ''}`}>
@@ -43,7 +47,7 @@ const EventDetails: React.FC = () => {
                     </div>
                      <div className={`reveal ${isVisible ? 'visible' : ''}`} style={{transitionDelay: '400ms'}}>
                         <DetailCard title="Global Reach" description="The event will be broadcast globally via streaming, bringing the action to fans worldwide.">
-                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9V3m0 18a9 9 0 01-9-9m-9 9a9 9 0 019-9"></path></svg>
+                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9V3m0 18a9 9 0 01-9-9m-9 9a9 9 0 019-9"></path></svg>
                         </DetailCard>
                     </div>
                 </div>
