@@ -12,11 +12,13 @@ const Footer: React.FC<FooterProps> = ({ navigateTo }) => {
           
           {/* Column 1: Logo & Event Info */}
           <div className="md:col-span-4 flex flex-col items-center md:items-start">
-            <img 
-              src="https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761946347121_avance_global_cup_logo.png?alt=media&token=b4d7d75a-dc46-436c-b5c5-81edd0ba6154" 
-              alt="Avance Global Cup Logo" 
-              className="h-16 w-auto"
-            />
+            <button onClick={() => navigateTo('main')} className="cursor-pointer" aria-label="Go to homepage">
+              <img 
+                src="https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761946347121_avance_global_cup_logo.png?alt=media&token=b4d7d75a-dc46-436c-b5c5-81edd0ba6154" 
+                alt="Avance Global Cup Logo" 
+                className="h-16 w-auto"
+              />
+            </button>
             <p className="mt-4 text-center md:text-left">Málaga, Spain | January 29 to 31, 2026</p>
           </div>
 

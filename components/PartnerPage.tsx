@@ -42,7 +42,7 @@ const PartnerPage: React.FC<PartnerPageProps> = ({ navigateTo }) => {
     return (
     <>
         <section 
-            className="relative text-white bg-cover bg-center bg-fixed pt-40 pb-20"
+            className="relative text-white bg-cover bg-center bg-fixed pt-52 pb-28"
             style={{ backgroundImage: "url('https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761945821047_AVANCE_BASKETBALL_67.jpg?alt=media&token=86799e0c-b8f5-422e-9e70-eb6bfacb316c')" }}
         >
             <div className="absolute inset-0 bg-black/70" aria-hidden="true"></div>
@@ -53,11 +53,24 @@ const PartnerPage: React.FC<PartnerPageProps> = ({ navigateTo }) => {
                 <p className="mt-4 text-lg text-gray-300 max-w-3xl mx-auto">
                     Join us in shaping the future of global basketball and connect your brand with an elite, international audience.
                 </p>
+                <div className="mt-10">
+                    <a 
+                        href="#contact"
+                        className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                    >
+                        Contact Us for Partnership
+                    </a>
+                </div>
             </div>
         </section>
 
-        <section id="why-partner" className="py-20 bg-[#1a202c]">
-            <div className="container mx-auto px-6">
+        <section 
+            id="why-partner"
+            className="relative py-20 bg-cover bg-center bg-fixed"
+            style={{ backgroundImage: "url('https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761994360612_AVANCE_BASKETBALL_SanDiego_F_2.jpg?alt=media&token=98e66d3d-adb4-4400-bdcc-a26767a9bdd1')" }}
+        >
+             <div className="absolute inset-0 bg-black/70" aria-hidden="true"></div>
+            <div className="relative z-10 container mx-auto px-6">
                 <button onClick={() => navigateTo('main')} className="mb-8 text-blue-400 hover:text-blue-300 transition-colors">
                     &larr; Back to main page
                 </button>
