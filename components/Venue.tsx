@@ -31,8 +31,15 @@ const Venue: React.FC = () => {
     const isImagesVisible = useOnScreen(imagesRef);
 
     return (
-        <section id="venue" className="py-20 bg-[#1a202c] overflow-hidden">
-            <div className="container mx-auto px-6">
+        <section id="venue" className="relative py-20 overflow-hidden">
+             <div 
+                className="absolute inset-0 bg-cover bg-center bg-fixed"
+                style={{ backgroundImage: "url('https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761950147664_WhatsApp-Image-2021-12-13-at-10.15.51-AM.jpeg?alt=media&token=147a429f-4059-47c3-8b1a-cb8782f922b0')" }}
+                aria-hidden="true"
+            ></div>
+            <div className="absolute inset-0 bg-black/70" aria-hidden="true"></div>
+
+            <div className="relative container mx-auto px-6">
                 <h2 className="text-4xl font-extrabold text-white text-center mb-12">The Venue: A Global Basketball Epicenter</h2>
 
                 <div ref={textRef} className={`reveal ${isTextVisible ? 'visible' : ''} max-w-4xl mx-auto`}>
@@ -48,7 +55,7 @@ const Venue: React.FC = () => {
                         ))}
                     </ul>
                     <a href="https://www.theembassytc.com/" target="_blank" rel="noopener noreferrer" className="block" aria-label="Visit The Embassy website">
-                        <div className="bg-[#222a35] p-6 rounded-lg border border-gray-700 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:border-blue-400">
+                        <div className="bg-[#222a35]/80 backdrop-blur-sm p-6 rounded-lg border border-gray-700 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:border-blue-400">
                             <img 
                                 src="https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761947263093_Logo_THE_EMBBASSY_BLANCO_SIN_FONDO_400x400.png?alt=media&token=31d65c7b-9097-4fa6-a1b9-5aea3d115ff3" 
                                 alt="The Embassy Logo"
