@@ -11,23 +11,42 @@ import LegalPage from './components/LegalPage';
 import CookieBanner from './components/CookieBanner';
 import PartnerPage from './components/PartnerPage';
 
+const pageConfig = {
+  main: { path: '/', title: 'Avance Global Basketball Cup' },
+  partner: { path: '/partner', title: 'Be a Partner | Avance Global Cup' },
+  legal: { path: '/legal', title: 'Terms and Conditions & Cookie Policy | Avance Global Cup' },
+};
+
+const getPageFromPath = (path: string): string => {
+  return Object.keys(pageConfig).find(page => pageConfig[page as keyof typeof pageConfig].path === path) || 'main';
+};
+
+
 const App: React.FC = () => {
-  const [currentPage, setCurrentPage] = useState('main');
+  const [currentPage, setCurrentPage] = useState(getPageFromPath(window.location.pathname));
 
   useEffect(() => {
-    if (currentPage === 'main') {
-      document.title = 'Avance Global Basketball Cup';
-      document.documentElement.lang = 'en';
-    } else if (currentPage === 'legal') {
-      document.title = 'Terms and Conditions & Cookie Policy | Avance Global Cup';
-      document.documentElement.lang = 'en';
-    } else if (currentPage === 'partner') {
-      document.title = 'Be a Partner | Avance Global Cup';
-      document.documentElement.lang = 'en';
-    }
+    const handlePopState = () => {
+      setCurrentPage(getPageFromPath(window.location.pathname));
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
+  
+  useEffect(() => {
+    document.title = pageConfig[currentPage as keyof typeof pageConfig].title;
+    document.documentElement.lang = 'en';
   }, [currentPage]);
 
   const navigateTo = (page: string) => {
+    if (currentPage === page && window.location.pathname === pageConfig[page as keyof typeof pageConfig].path) {
+        window.scrollTo(0, 0);
+        return;
+    }
+    
+    const newPath = pageConfig[page as keyof typeof pageConfig].path;
+    window.history.pushState({ page }, '', newPath);
     setCurrentPage(page);
     window.scrollTo(0, 0);
   };

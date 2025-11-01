@@ -5,6 +5,12 @@ interface FooterProps {
 }
 
 const Footer: React.FC<FooterProps> = ({ navigateTo }) => {
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, page: string) => {
+    e.preventDefault();
+    navigateTo(page);
+  };
+
   return (
     <footer id="contact" className="bg-[#151f28] border-t border-gray-800 py-12">
       <div className="container mx-auto px-6 text-gray-400">
@@ -12,13 +18,13 @@ const Footer: React.FC<FooterProps> = ({ navigateTo }) => {
           
           {/* Column 1: Logo & Event Info */}
           <div className="md:col-span-4 flex flex-col items-center md:items-start">
-            <button onClick={() => navigateTo('main')} className="cursor-pointer" aria-label="Go to homepage">
+            <a href="/" onClick={(e) => handleNavClick(e, 'main')} className="cursor-pointer" aria-label="Go to homepage">
               <img 
                 src="https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761946347121_avance_global_cup_logo.png?alt=media&token=b4d7d75a-dc46-436c-b5c5-81edd0ba6154" 
                 alt="Avance Global Cup Logo" 
                 className="h-16 w-auto"
               />
-            </button>
+            </a>
             <p className="mt-4 text-center md:text-left">Málaga, Spain | January 29 to 31, 2026</p>
           </div>
 
@@ -58,9 +64,9 @@ const Footer: React.FC<FooterProps> = ({ navigateTo }) => {
 
         <div className="mt-10 pt-6 border-t border-gray-700 flex flex-col sm:flex-row justify-between items-center text-sm">
             <p className="order-2 sm:order-1 mt-4 sm:mt-0">&copy; {new Date().getFullYear()} AVANCE Global. All rights reserved.</p>
-            <button onClick={() => navigateTo('legal')} className="order-1 sm:order-2 text-gray-400 hover:text-white transition-colors duration-200">
+            <a href="/legal" onClick={(e) => handleNavClick(e, 'legal')} className="order-1 sm:order-2 text-gray-400 hover:text-white transition-colors duration-200">
                 Terms and Conditions & Cookie Policy
-            </button>
+            </a>
         </div>
       </div>
     </footer>
