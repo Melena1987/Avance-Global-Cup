@@ -59,7 +59,6 @@
       }
       .scrolling-ribbon-content {
         display: flex;
-        width: 200%; /* Because we duplicate the images */
         animation: scroll 45s linear infinite;
       }
       .scrolling-ribbon-content.reverse {
@@ -74,6 +73,7 @@
         border-radius: 0.5rem;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease;
+        flex-shrink: 0;
       }
       .scrolling-ribbon img:hover {
           transform: scale(1.05);
