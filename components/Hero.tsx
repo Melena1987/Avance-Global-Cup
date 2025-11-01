@@ -22,6 +22,7 @@ const Hero: React.FC = () => {
         id="home" 
         className="relative text-white bg-cover bg-center bg-fixed"
         style={{ backgroundImage: "url('https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761945946387_AVANCE_BASKETBALL_SanDiego_D2-12.jpg?alt=media&token=528b931d-8ae2-44b7-af4e-a2cf197a42b9')" }}
+        aria-label="Elite basketball players competing at the Avance Global Cup"
     >
       <div className="absolute inset-0 bg-black/60" aria-hidden="true"></div>
       

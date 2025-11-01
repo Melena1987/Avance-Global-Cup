@@ -25,6 +25,7 @@ const Vision: React.FC = () => {
         <section 
             id="vision" 
             className="relative py-20 overflow-hidden"
+            aria-label="Close-up of a basketball player dribbling the ball"
         >
              <div 
                 className="absolute inset-0 bg-cover bg-center bg-fixed"

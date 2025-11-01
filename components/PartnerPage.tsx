@@ -61,6 +61,7 @@ const PartnerPage: React.FC<PartnerPageProps> = ({ navigateTo }) => {
         <section 
             className="relative text-white bg-cover bg-center bg-fixed pt-52 pb-28"
             style={{ backgroundImage: "url('https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761945821047_AVANCE_BASKETBALL_67.jpg?alt=media&token=86799e0c-b8f5-422e-9e70-eb6bfacb316c')" }}
+            aria-label="Basketball players planning a strategy during a timeout"
         >
             <div className="absolute inset-0 bg-black/70" aria-hidden="true"></div>
             <div className="relative z-10 container mx-auto px-6 text-center">
@@ -86,6 +87,7 @@ const PartnerPage: React.FC<PartnerPageProps> = ({ navigateTo }) => {
             id="why-partner"
             className="relative py-20 bg-cover bg-center bg-fixed"
             style={{ backgroundImage: "url('https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761994360612_AVANCE_BASKETBALL_SanDiego_F_2.jpg?alt=media&token=98e66d3d-adb4-4400-bdcc-a26767a9bdd1')" }}
+            aria-label="View from behind the hoop of a basketball game in progress"
         >
              <div className="absolute inset-0 bg-black/70" aria-hidden="true"></div>
             <div className="relative z-10 container mx-auto px-6">
@@ -117,6 +119,7 @@ const PartnerPage: React.FC<PartnerPageProps> = ({ navigateTo }) => {
             id="sponsorship-opportunities" 
             className="relative py-20 bg-cover bg-center bg-fixed"
             style={{ backgroundImage: "url('https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761945946387_AVANCE_BASKETBALL_SanDiego_D2-70.jpg?alt=media&token=a4f8464d-afbb-4d61-9958-b60e9ea269af')" }}
+            aria-label="Team celebrating a victory at the Avance Global Basketball Cup"
         >
             <div className="absolute inset-0 bg-[#1a202c]/80" aria-hidden="true"></div>
              <div className="relative container mx-auto px-6">

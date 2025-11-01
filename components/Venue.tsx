@@ -31,7 +31,11 @@ const Venue: React.FC = () => {
     const isImagesVisible = useOnScreen(imagesRef);
 
     return (
-        <section id="venue" className="relative py-20 overflow-hidden">
+        <section 
+            id="venue" 
+            className="relative py-20 overflow-hidden"
+            aria-label="Interior view of The Embassy, a modern basketball training facility in Málaga"
+        >
              <div 
                 className="absolute inset-0 bg-cover bg-center bg-fixed"
                 style={{ backgroundImage: "url('https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761950147664_WhatsApp-Image-2021-12-13-at-10.15.51-AM.jpeg?alt=media&token=147a429f-4059-47c3-8b1a-cb8782f922b0')" }}
