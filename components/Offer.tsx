@@ -9,16 +9,24 @@ const CheckListItem: React.FC<{ children: React.ReactNode }> = ({ children }) =>
 );
 
 const Offer: React.FC = () => {
-    const textRef = useRef<HTMLDivElement>(null);
-    const imageRef = useRef<HTMLDivElement>(null);
-    const isTextVisible = useOnScreen(textRef);
-    const isImageVisible = useOnScreen(imageRef);
+    const contentRef = useRef<HTMLDivElement>(null);
+    const isContentVisible = useOnScreen(contentRef);
 
     return (
-        <section id="offer" className="py-20 bg-[#1a202c] overflow-hidden">
-            <div className="container mx-auto px-6">
-                <div className="grid lg:grid-cols-2 gap-12 items-center">
-                    <div ref={textRef} className={`reveal ${isTextVisible ? 'visible' : ''}`}>
+        <section 
+            id="offer" 
+            className="relative py-20 bg-cover bg-center bg-fixed overflow-hidden"
+            style={{ backgroundImage: "url('https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761945821047_AVANCE_BASKETBALL_42.jpg?alt=media&token=f9981e01-d2d5-4d21-a9f3-1e5edb341f65')" }}
+            aria-label="An elite player dunking a basketball during an Avance event"
+        >
+            <div className="absolute inset-0 bg-black/70" aria-hidden="true"></div>
+            
+            <div className="relative container mx-auto px-6">
+                <div 
+                    ref={contentRef} 
+                    className={`reveal ${isContentVisible ? 'visible' : ''} max-w-4xl mx-auto`}
+                >
+                    <div className="bg-[#1a202c]/70 backdrop-blur-md p-8 md:p-10 rounded-lg border border-gray-700 shadow-2xl">
                         <h2 className="text-4xl font-extrabold text-white mb-6">What we offer?</h2>
                         <ul className="space-y-3 list-disc list-inside text-lg text-gray-300 mb-10">
                             <li>Elite scholastic teams from the U.S, Europe, Asia and Oceania</li>
@@ -37,9 +45,6 @@ const Offer: React.FC = () => {
                             <CheckListItem>VIP access to all AVANCE Global Spain sessions & events</CheckListItem>
                             <CheckListItem>Teams must provide international travel and medical insurance</CheckListItem>
                         </ul>
-                    </div>
-                    <div ref={imageRef} className={`reveal ${isImageVisible ? 'visible' : ''} w-full h-full min-h-[500px] rounded-lg overflow-hidden shadow-2xl`} style={{transitionDelay: '200ms'}}>
-                        <img src="https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761945821047_AVANCE_BASKETBALL_42.jpg?alt=media&token=f9981e01-d2d5-4d21-a9f3-1e5edb341f65" alt="An elite player dunking a basketball during an Avance event" className="w-full h-full object-cover"/>
                     </div>
                 </div>
             </div>
