@@ -9,6 +9,7 @@ import Offer from './components/Offer';
 import Footer from './components/Footer';
 import LegalPage from './components/LegalPage';
 import CookieBanner from './components/CookieBanner';
+import PartnerPage from './components/PartnerPage';
 
 const App: React.FC = () => {
   const [currentPage, setCurrentPage] = useState('main');
@@ -20,6 +21,9 @@ const App: React.FC = () => {
     } else if (currentPage === 'legal') {
       document.title = 'Terms and Conditions & Cookie Policy | Avance Global Cup';
       document.documentElement.lang = 'en';
+    } else if (currentPage === 'partner') {
+      document.title = 'Be a Partner | Avance Global Cup';
+      document.documentElement.lang = 'en';
     }
   }, [currentPage]);
 
@@ -28,21 +32,31 @@ const App: React.FC = () => {
     window.scrollTo(0, 0);
   };
 
+  const renderContent = () => {
+    switch (currentPage) {
+      case 'legal':
+        return <LegalPage navigateTo={navigateTo} />;
+      case 'partner':
+        return <PartnerPage navigateTo={navigateTo} />;
+      case 'main':
+      default:
+        return (
+          <main>
+            <Hero />
+            <Overview />
+            <Teams />
+            <EventDetails />
+            <Venue />
+            <Offer />
+          </main>
+        );
+    }
+  };
+
   return (
     <div className="bg-gradient-to-b from-[#1a202c] to-[#2d3748] text-gray-200 font-sans">
-      <Header navigateTo={navigateTo} />
-      {currentPage === 'main' ? (
-        <main>
-          <Hero />
-          <Overview />
-          <Teams />
-          <EventDetails />
-          <Venue />
-          <Offer />
-        </main>
-      ) : (
-        <LegalPage navigateTo={navigateTo} />
-      )}
+      <Header navigateTo={navigateTo} currentPage={currentPage} />
+      {renderContent()}
       <Footer navigateTo={navigateTo} />
       <CookieBanner navigateTo={navigateTo} />
     </div>

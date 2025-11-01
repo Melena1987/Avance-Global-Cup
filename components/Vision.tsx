@@ -10,7 +10,7 @@ const visionConcepts = [
 
 const VisionCard: React.FC<{ number: string; title: string; delay: number; isVisible: boolean }> = ({ number, title, delay, isVisible }) => (
     <div className={`reveal ${isVisible ? 'visible' : ''}`} style={{ transitionDelay: `${delay}ms` }}>
-        <div className="bg-[#2d3748] p-8 rounded-lg border border-gray-700 h-full transition-all duration-300 hover:border-blue-400 hover:shadow-2xl hover:-translate-y-2">
+        <div className="bg-[#2d3748]/80 backdrop-blur-sm p-8 rounded-lg border border-gray-700 h-full transition-all duration-300 hover:border-blue-400 hover:shadow-2xl hover:-translate-y-2">
             <span className="block text-5xl font-extrabold text-blue-400/50 mb-4">{number}</span>
             <h3 className="text-2xl font-bold text-white">{title}</h3>
         </div>
@@ -22,8 +22,17 @@ const Vision: React.FC = () => {
     const isVisible = useOnScreen(contentRef);
 
     return (
-        <section id="vision" className="py-20 bg-[#222a35] overflow-hidden">
-            <div ref={contentRef} className="container mx-auto px-6">
+        <section 
+            id="vision" 
+            className="relative py-20 overflow-hidden"
+        >
+             <div 
+                className="absolute inset-0 bg-cover bg-center bg-fixed"
+                style={{ backgroundImage: "url('https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761945821047_AVANCE_BASKETBALL_57.jpg?alt=media&token=ac5097fb-5f0f-41fa-a46c-d97770835c3a')" }}
+                aria-hidden="true"
+            ></div>
+            <div className="absolute inset-0 bg-[#1a202c]/80" aria-hidden="true"></div>
+            <div ref={contentRef} className="relative container mx-auto px-6">
                 <div className={`reveal ${isVisible ? 'visible' : ''} text-center mb-16`}>
                     <h2 className="text-4xl font-extrabold text-white">Vision & Concept</h2>
                 </div>

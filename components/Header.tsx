@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react';
 
 interface HeaderProps {
   navigateTo: (page: string) => void;
+  currentPage: string;
 }
 
-const Header: React.FC<HeaderProps> = ({ navigateTo }) => {
+const Header: React.FC<HeaderProps> = ({ navigateTo, currentPage }) => {
   const [scrolled, setScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -36,9 +37,14 @@ const Header: React.FC<HeaderProps> = ({ navigateTo }) => {
     { href: '#contact', label: 'Contact' },
   ];
   
-  const handleNavClick = () => {
+  const handleNavClick = (page: string) => {
+    navigateTo(page);
     setIsMenuOpen(false);
   };
+  
+  const handleAnchorClick = () => {
+      setIsMenuOpen(false);
+  }
 
   const handleLogoClick = () => {
     navigateTo('main');
@@ -56,12 +62,15 @@ const Header: React.FC<HeaderProps> = ({ navigateTo }) => {
               className="h-12 w-auto"
             />
           </button>
-          <nav className="hidden md:flex space-x-6">
-            {navLinks.map(link => (
-              <a key={link.href} href={link.href} className="text-gray-300 hover:text-white transition-colors duration-200">
+          <nav className="hidden md:flex items-center space-x-4">
+            {currentPage === 'main' && navLinks.map(link => (
+              <a key={link.href} href={link.href} className="text-gray-300 hover:text-white transition-colors duration-200 text-sm">
                 {link.label}
               </a>
             ))}
+            <button onClick={() => handleNavClick('partner')} className="text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200 px-4 py-2 rounded-md text-sm font-semibold">
+                Be a Partner
+            </button>
           </nav>
           <button className="md:hidden text-white z-50" onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Toggle menu" aria-expanded={isMenuOpen}>
               {isMenuOpen ? (
@@ -82,11 +91,16 @@ const Header: React.FC<HeaderProps> = ({ navigateTo }) => {
         className={`fixed inset-0 bg-[#1a202c] z-40 transform transition-transform duration-300 ease-in-out md:hidden ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
       >
         <nav className="flex flex-col items-center justify-center h-full space-y-8">
-          {navLinks.map(link => (
-            <a key={link.href} href={link.href} onClick={handleNavClick} className="text-2xl text-gray-300 hover:text-white transition-colors duration-200">
+          {currentPage === 'main' ? navLinks.map(link => (
+            <a key={link.href} href={link.href} onClick={handleAnchorClick} className="text-2xl text-gray-300 hover:text-white transition-colors duration-200">
               {link.label}
             </a>
-          ))}
+          )) : (
+             <button onClick={() => handleNavClick('main')} className="text-2xl text-gray-300 hover:text-white transition-colors duration-200">Home</button>
+          )}
+           <button onClick={() => handleNavClick('partner')} className="text-2xl text-blue-400 hover:text-blue-300 transition-colors duration-200">
+             Be a Partner
+           </button>
         </nav>
       </div>
     </>
