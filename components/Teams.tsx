@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import useOnScreen from './useOnScreen';
+import Counter from './Counter';
 
 interface TeamsProps {
   navigateTo: (page: string) => void;
@@ -18,9 +19,24 @@ const Teams: React.FC<TeamsProps> = ({ navigateTo }) => {
     <section id="teams" className="py-20 bg-[#151f28] overflow-hidden">
       <div ref={contentRef} className={`reveal ${isVisible ? 'visible' : ''} container mx-auto px-6 text-center`}>
         <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16 mb-12">
-            <div><span className="text-5xl font-extrabold text-blue-400">5</span><p className="text-lg text-gray-300">Continents</p></div>
-            <div><span className="text-5xl font-extrabold text-blue-400">7</span><p className="text-lg text-gray-300">Countries</p></div>
-            <div><span className="text-5xl font-extrabold text-blue-400">10</span><p className="text-lg text-gray-300">Teams</p></div>
+            <div>
+                <span className="text-5xl font-extrabold text-blue-400">
+                    <Counter end={5} isVisible={isVisible} />
+                </span>
+                <p className="text-lg text-gray-300">Continents</p>
+            </div>
+            <div>
+                <span className="text-5xl font-extrabold text-blue-400">
+                    <Counter end={7} isVisible={isVisible} />
+                </span>
+                <p className="text-lg text-gray-300">Countries</p>
+            </div>
+            <div>
+                <span className="text-5xl font-extrabold text-blue-400">
+                    <Counter end={10} isVisible={isVisible} />
+                </span>
+                <p className="text-lg text-gray-300">Teams</p>
+            </div>
         </div>
         <h2 className="text-4xl font-extrabold text-white mb-10">THE TEAMS</h2>
         
