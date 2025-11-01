@@ -44,9 +44,14 @@ const Header: React.FC<HeaderProps> = ({ navigateTo, currentPage }) => {
     setIsMenuOpen(false);
   };
   
-  const handleAnchorClick = () => {
-      setIsMenuOpen(false);
-  }
+  const handleScrollTo = (e: React.MouseEvent<HTMLAnchorElement>, selector: string) => {
+    e.preventDefault();
+    const element = document.querySelector(selector);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMenuOpen(false); // Close mobile menu on click
+  };
 
   return (
     <>
@@ -61,7 +66,12 @@ const Header: React.FC<HeaderProps> = ({ navigateTo, currentPage }) => {
           </a>
           <nav className="hidden md:flex items-center space-x-4">
             {currentPage === 'main' && navLinks.map(link => (
-              <a key={link.href} href={link.href} className="text-gray-300 hover:text-white transition-colors duration-200 text-sm">
+              <a 
+                key={link.href} 
+                href={link.href} 
+                onClick={(e) => handleScrollTo(e, link.href)}
+                className="text-gray-300 hover:text-white transition-colors duration-200 text-sm"
+              >
                 {link.label}
               </a>
             ))}
@@ -89,7 +99,12 @@ const Header: React.FC<HeaderProps> = ({ navigateTo, currentPage }) => {
       >
         <nav className="flex flex-col items-center justify-center h-full space-y-8">
           {currentPage === 'main' ? navLinks.map(link => (
-            <a key={link.href} href={link.href} onClick={handleAnchorClick} className="text-2xl text-gray-300 hover:text-white transition-colors duration-200">
+            <a 
+              key={link.href} 
+              href={link.href} 
+              onClick={(e) => handleScrollTo(e, link.href)} 
+              className="text-2xl text-gray-300 hover:text-white transition-colors duration-200"
+            >
               {link.label}
             </a>
           )) : (
