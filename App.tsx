@@ -16,7 +16,7 @@ import GalleryPage from './components/GalleryPage';
 const pageConfig = {
   main: { path: '/', title: 'Avance Global Basketball Cup' },
   partner: { path: '/partner', title: 'Be a Partner | Avance Global Cup' },
-  gallery: { path: '/gallery', title: 'Official Gallery 2024 | Avance Global Cup' },
+  gallery: { path: '/gallery2024', title: 'Official Gallery 2024 | Avance Global Cup' },
   legal: { path: '/legal', title: 'Terms and Conditions & Cookie Policy | Avance Global Cup' },
 };
 

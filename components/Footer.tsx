@@ -49,7 +49,7 @@ const Footer: React.FC<FooterProps> = ({ navigateTo }) => {
              <ul className="space-y-2">
                 <li><a href="/" onClick={(e) => handleNavClick(e, 'main')} className="text-gray-300 hover:text-blue-400 transition-colors">Home</a></li>
                 <li><a href="/partner" onClick={(e) => handleNavClick(e, 'partner')} className="text-gray-300 hover:text-blue-400 transition-colors">Be a Partner</a></li>
-                <li><a href="/gallery" onClick={(e) => handleNavClick(e, 'gallery')} className="text-gray-300 hover:text-blue-400 transition-colors">Gallery 2024</a></li>
+                <li><a href="/gallery2024" onClick={(e) => handleNavClick(e, 'gallery')} className="text-gray-300 hover:text-blue-400 transition-colors">Gallery 2024</a></li>
              </ul>
           </div>
 
