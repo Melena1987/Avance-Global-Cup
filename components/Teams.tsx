@@ -17,7 +17,7 @@ const Teams: React.FC = () => {
         
         <div className="w-full max-w-6xl mx-auto rounded-lg overflow-hidden">
           <img 
-              src="https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761950996522_mapa_con_logos_avnace_global_cup.png?alt=media&token=134f4002-2c7e-47fc-bb7a-10f305a839df" 
+              src="https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761985339371_mapa_con_logos_avance_global_cup.png?alt=media&token=a8c150b5-7a9d-4ffe-b581-d3d5acc07dca" 
               alt="Map of participating teams"
               className="w-full h-auto object-contain"
           />
