@@ -1,9 +1,6 @@
 import React, { useRef } from 'react';
 import useOnScreen from './useOnScreen';
-
-interface GalleryPreviewProps {
-  navigateTo: (page: string) => void;
-}
+import Link from 'next/link';
 
 const galleryImages = [
     "https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761997473781_AVANCE_BASKETBALL_SanDiego_F_12_400x400.jpg?alt=media&token=d37c49cf-cdc9-43f0-bf43-0b36cee6ae77",
@@ -15,14 +12,9 @@ const galleryImages = [
     "https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761997253318_AVANCE_BASKETBALL_SanDiego_D2-56_400x400.jpg?alt=media&token=041b1879-d32c-4c83-ae60-29f868816c7a"
 ];
 
-const GalleryPreview: React.FC<GalleryPreviewProps> = ({ navigateTo }) => {
+const GalleryPreview: React.FC = () => {
     const contentRef = useRef<HTMLDivElement>(null);
     const isVisible = useOnScreen(contentRef, { threshold: 0.1 });
-
-    const handleGalleryClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-        e.preventDefault();
-        navigateTo('gallery');
-    };
 
     return (
         <section id="gallery-preview" className="py-20 bg-[#151f28] overflow-hidden">
@@ -45,13 +37,12 @@ const GalleryPreview: React.FC<GalleryPreviewProps> = ({ navigateTo }) => {
                     </div>
                 </div>
 
-                <a
+                <Link
                     href="/gallery2024"
-                    onClick={handleGalleryClick}
                     className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                 >
                     View Full Gallery
-                </a>
+                </Link>
             </div>
         </section>
     );

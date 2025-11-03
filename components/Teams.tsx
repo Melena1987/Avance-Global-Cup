@@ -1,19 +1,11 @@
 import React, { useRef } from 'react';
 import useOnScreen from './useOnScreen';
 import Counter from './Counter';
+import Link from 'next/link';
 
-interface TeamsProps {
-  navigateTo: (page: string) => void;
-}
-
-const Teams: React.FC<TeamsProps> = ({ navigateTo }) => {
+const Teams: React.FC = () => {
   const contentRef = useRef<HTMLDivElement>(null);
   const isVisible = useOnScreen(contentRef, { threshold: 0.1 });
-
-  const handlePartnerClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    navigateTo('partner');
-  };
 
   return (
     <section id="teams" className="py-20 bg-[#151f28] overflow-hidden">
@@ -52,13 +44,12 @@ const Teams: React.FC<TeamsProps> = ({ navigateTo }) => {
             <p className="text-xl text-gray-300 mb-6 max-w-2xl mx-auto">
                 Connect your brand with the next generation of basketball superstars and a passionate global audience.
             </p>
-            <a
+            <Link
                 href="/partner"
-                onClick={handlePartnerClick}
                 className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
                 Become a Partner
-            </a>
+            </Link>
         </div>
       </div>
     </section>

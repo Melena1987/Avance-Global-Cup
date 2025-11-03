@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 
-interface CookieBannerProps {
-  navigateTo: (page: string) => void;
-}
-
-const CookieBanner: React.FC<CookieBannerProps> = ({ navigateTo }) => {
+const CookieBanner: React.FC = () => {
   const [showBanner, setShowBanner] = useState(false);
 
   useEffect(() => {
@@ -19,11 +16,6 @@ const CookieBanner: React.FC<CookieBannerProps> = ({ navigateTo }) => {
     setShowBanner(false);
   };
 
-  const handlePolicyClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    navigateTo('legal');
-  }
-
   if (!showBanner) {
     return null;
   }
@@ -33,9 +25,9 @@ const CookieBanner: React.FC<CookieBannerProps> = ({ navigateTo }) => {
       <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
         <p className="text-sm text-gray-300 text-center sm:text-left">
           This website uses cookies to ensure you get the best experience. By continuing, you agree to our use of cookies. For more information, see our{' '}
-          <button onClick={handlePolicyClick} className="text-blue-400 hover:underline">
+          <Link href="/legal" className="text-blue-400 hover:underline">
             Cookie Policy
-          </button>.
+          </Link>.
         </p>
         <button 
           onClick={handleAccept} 
