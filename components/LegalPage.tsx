@@ -1,13 +1,21 @@
 import React from 'react';
-import Link from 'next/link';
 
-const LegalPage: React.FC = () => {
+interface LegalPageProps {
+  navigateTo: (page: string) => void;
+}
+
+const LegalPage: React.FC<LegalPageProps> = ({ navigateTo }) => {
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, page: string) => {
+    e.preventDefault();
+    navigateTo(page);
+  };
+  
   return (
     <section className="py-24 pt-40 bg-[#1a202c]">
       <div className="container mx-auto px-6 text-gray-300 max-w-4xl">
-        <Link href="/" className="mb-8 text-blue-400 hover:text-blue-300 transition-colors inline-block">
+        <a href="/" onClick={(e) => handleNavClick(e, 'main')} className="mb-8 text-blue-400 hover:text-blue-300 transition-colors inline-block">
           &larr; Back to main page
-        </Link>
+        </a>
 
         <h1 className="text-4xl font-extrabold text-white mb-8">Terms and Conditions & Cookie Policy</h1>
 

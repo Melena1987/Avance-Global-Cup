@@ -2,7 +2,10 @@ import React, { useRef } from 'react';
 import useOnScreen from './useOnScreen';
 import Vision from './Vision';
 import Impact from './Impact';
-import Link from 'next/link';
+
+interface PartnerPageProps {
+  navigateTo: (page: string) => void;
+}
 
 const FeatureCard: React.FC<{ title: string; children: React.ReactNode; icon: React.ReactNode; isVisible: boolean, delay: number }> = ({ title, children, icon, isVisible, delay }) => (
     <div className={`reveal ${isVisible ? 'visible' : ''}`} style={{ transitionDelay: `${delay}ms` }}>
@@ -30,11 +33,28 @@ const SponsorshipListItem: React.FC<{ title: string, description: string }> = ({
     </li>
 );
 
-const PartnerPage: React.FC = () => {
+const PartnerPage: React.FC<PartnerPageProps> = ({ navigateTo }) => {
     const whyPartnerRef = useRef<HTMLDivElement>(null);
     const opportunitiesRef = useRef<HTMLDivElement>(null);
     const isWhyPartnerVisible = useOnScreen(whyPartnerRef);
     const isOpportunitiesVisible = useOnScreen(opportunitiesRef);
+    
+    const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, page: string) => {
+        e.preventDefault();
+        navigateTo(page);
+    };
+
+    const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+        e.preventDefault();
+        if (window.location.pathname !== '/') {
+            navigateTo('main');
+            setTimeout(() => {
+                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+            }, 100);
+        } else {
+            document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
   
     return (
     <>
@@ -52,12 +72,13 @@ const PartnerPage: React.FC = () => {
                     Join us in shaping the future of global basketball and connect your brand with an elite, international audience.
                 </p>
                 <div className="mt-10">
-                    <Link 
+                    <a 
                         href="/#contact"
+                        onClick={handleContactClick}
                         className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                     >
                         Contact Us for Partnership
-                    </Link>
+                    </a>
                 </div>
             </div>
         </section>
@@ -70,9 +91,9 @@ const PartnerPage: React.FC = () => {
         >
              <div className="absolute inset-0 bg-black/70" aria-hidden="true"></div>
             <div className="relative z-10 container mx-auto px-6">
-                <Link href="/" className="mb-8 text-blue-400 hover:text-blue-300 transition-colors inline-block">
+                <a href="/" onClick={(e) => handleNavClick(e, 'main')} className="mb-8 text-blue-400 hover:text-blue-300 transition-colors">
                     &larr; Back to main page
-                </Link>
+                </a>
                 <h2 className="text-4xl font-extrabold text-white text-center mb-12">Why Partner With AVANCE GLOBAL CUP?</h2>
                 <div ref={whyPartnerRef} className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                     <FeatureCard title="Global Brand Visibility" isVisible={isWhyPartnerVisible} delay={0} icon={<svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2h10a2 2 0 002-2v-1a2 2 0 012-2h1.945M7.905 11A9 9 0 005.065 19h13.87A9 9 0 0016.095 11m-8.19 0a9 9 0 0110.38 0M12 11V3m0 0a2 2 0 100 4 2 2 0 000-4z" /></svg>}>
@@ -92,7 +113,7 @@ const PartnerPage: React.FC = () => {
         </section>
 
         <Vision />
-        <Impact />
+        <Impact navigateTo={navigateTo} />
 
         <section 
             id="sponsorship-opportunities" 

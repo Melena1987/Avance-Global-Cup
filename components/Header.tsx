@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
 
-const Header: React.FC = () => {
+interface HeaderProps {
+  navigateTo: (page: string) => void;
+  currentPage: string;
+}
+
+const Header: React.FC<HeaderProps> = ({ navigateTo, currentPage }) => {
   const [scrolled, setScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,6 +38,12 @@ const Header: React.FC = () => {
     { href: '#contact', label: 'Contact' },
   ];
   
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, page: string) => {
+    e.preventDefault();
+    navigateTo(page);
+    setIsMenuOpen(false);
+  };
+  
   const handleScrollTo = (e: React.MouseEvent<HTMLAnchorElement>, selector: string) => {
     e.preventDefault();
     const element = document.querySelector(selector);
@@ -49,15 +57,15 @@ const Header: React.FC = () => {
     <>
       <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled || isMenuOpen ? 'bg-[#1a202c]/90 backdrop-blur-sm shadow-lg' : 'bg-transparent'}`}>
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-          <Link href="/" className="cursor-pointer z-50">
+          <a href="/" onClick={(e) => handleNavClick(e, 'main')} className="cursor-pointer z-50">
             <img 
               src="https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761946347121_avance_global_cup_logo.png?alt=media&token=b4d7d75a-dc46-436c-b5c5-81edd0ba6154" 
               alt="Avance Global Cup Logo" 
               className="h-12 w-auto"
             />
-          </Link>
+          </a>
           <nav className="hidden md:flex items-center space-x-4">
-            {router.pathname === '/' && navLinks.map(link => (
+            {currentPage === 'main' && navLinks.map(link => (
               <a 
                 key={link.href} 
                 href={link.href} 
@@ -67,9 +75,9 @@ const Header: React.FC = () => {
                 {link.label}
               </a>
             ))}
-            <Link href="/partner" className="text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200 px-4 py-2 rounded-md text-sm font-semibold">
+            <a href="/partner" onClick={(e) => handleNavClick(e, 'partner')} className="text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200 px-4 py-2 rounded-md text-sm font-semibold">
                 Be a Partner
-            </Link>
+            </a>
           </nav>
           <button className="md:hidden text-white z-50" onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Toggle menu" aria-expanded={isMenuOpen}>
               {isMenuOpen ? (
@@ -90,7 +98,7 @@ const Header: React.FC = () => {
         className={`fixed inset-0 bg-[#1a202c] z-40 transform transition-transform duration-300 ease-in-out md:hidden ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
       >
         <nav className="flex flex-col items-center justify-center h-full space-y-8">
-          {router.pathname === '/' ? navLinks.map(link => (
+          {currentPage === 'main' ? navLinks.map(link => (
             <a 
               key={link.href} 
               href={link.href} 
@@ -100,11 +108,11 @@ const Header: React.FC = () => {
               {link.label}
             </a>
           )) : (
-             <Link href="/" onClick={() => setIsMenuOpen(false)} className="text-2xl text-gray-300 hover:text-white transition-colors duration-200">Home</Link>
+             <a href="/" onClick={(e) => handleNavClick(e, 'main')} className="text-2xl text-gray-300 hover:text-white transition-colors duration-200">Home</a>
           )}
-           <Link href="/partner" onClick={() => setIsMenuOpen(false)} className="text-2xl text-blue-400 hover:text-blue-300 transition-colors duration-200">
+           <a href="/partner" onClick={(e) => handleNavClick(e, 'partner')} className="text-2xl text-blue-400 hover:text-blue-300 transition-colors duration-200">
              Be a Partner
-           </Link>
+           </a>
         </nav>
       </div>
     </>

@@ -1,9 +1,188 @@
-<script type="importmap">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Avance Global Basketball Cup</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="description" content="Experience the Avance Global Basketball Cup 2026 in Málaga, Spain. The world's premier international tournament for elite high school and junior basketball clubs. Witness the future of basketball." />
+    <meta name="keywords" content="Avance Global Basketball Cup, international basketball tournament, youth basketball, elite high school basketball, Málaga 2026, The Embassy Spain" />
+    <link rel="icon" type="image/png" href="https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761946347121_avance_global_cup_logo.png?alt=media&token=b4d7d75a-dc46-436c-b5c5-81edd0ba6154" />
+    <link rel="canonical" href="https://www.avanceglobalcup.com/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.avanceglobalcup.com/" />
+    <meta property="og:title" content="Avance Global Basketball Cup 2026" />
+    <meta property="og:description" content="Experience the Avance Global Basketball Cup 2026 in Málaga, Spain. The world's premier international tournament for elite high school and junior basketball clubs. Witness the future of basketball." />
+    <meta property="og:image" content="https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761945946387_AVANCE_BASKETBALL_SanDiego_D2-12.jpg?alt=media&token=528b931d-8ae2-44b7-af4e-a2cf197a42b9" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://www.avanceglobalcup.com/" />
+    <meta property="twitter:title" content="Avance Global Basketball Cup 2026" />
+    <meta property="twitter:description" content="Experience the Avance Global Basketball Cup 2026 in Málaga, Spain. The world's premier international tournament for elite high school and junior basketball clubs. Witness the future of basketball." />
+    <meta property="twitter:image" content="https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761945946387_AVANCE_BASKETBALL_SanDiego_D2-12.jpg?alt=media&token=528b931d-8ae2-44b7-af4e-a2cf197a42b9" />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* For smooth scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+      /* Reveal on scroll animations */
+      .reveal {
+        opacity: 0;
+        transform: translateY(40px) scale(0.98);
+        transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        will-change: opacity, transform;
+      }
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+      
+      /* Scrolling ribbon animation */
+      @keyframes scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+      @keyframes scroll-reverse {
+        0% { transform: translateX(-50%); }
+        100% { transform: translateX(0); }
+      }
+      .scrolling-ribbon {
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+      }
+      .scrolling-ribbon-content {
+        display: flex;
+        animation: scroll 45s linear infinite;
+      }
+      .scrolling-ribbon-content.reverse {
+        animation-name: scroll-reverse;
+      }
+       .scrolling-ribbon-content:hover {
+        animation-play-state: paused;
+      }
+      .scrolling-ribbon img {
+        width: auto;
+        margin: 0 10px;
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        flex-shrink: 0;
+      }
+      .scrolling-ribbon img:hover {
+          transform: scale(1.05);
+      }
+
+      /* Mobile speed adjustment */
+      @media (max-width: 768px) {
+        .scrolling-ribbon-content {
+          animation-duration: 20s;
+        }
+      }
+    </style>
+  <script type="importmap">
 {
   "imports": {
-    "next/": "https://aistudiocdn.com/next@^16.0.1/",
     "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "react": "https://aistudiocdn.com/react@^19.2.0"
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "path": "https://aistudiocdn.com/path@^0.12.7",
+    "vite": "https://aistudiocdn.com/vite@^7.1.12",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.0"
   }
 }
 </script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SportsEvent",
+      "name": "Avance Global Basketball Cup 2026",
+      "startDate": "2026-01-29",
+      "endDate": "2026-01-31",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/MixedEventAttendanceMode",
+      "location": {
+        "@type": "Place",
+        "name": "The Embassy",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Fuengirola",
+          "addressRegion": "Málaga",
+          "addressCountry": "ES"
+        }
+      },
+      "image": [
+        "https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761945946387_AVANCE_BASKETBALL_SanDiego_D2-12.jpg?alt=media&token=528b931d-8ae2-44b7-af4e-a2cf197a42b9"
+       ],
+      "description": "A worldwide competition for high school and junior basketball clubs. An unprecedented event aiming to redefine basketball development by bringing together tomorrow's elite players on a global stage.",
+      "organizer": {
+        "@type": "Organization",
+        "name": "AVANCE Global",
+        "url": "https://www.avanceglobalcup.com/"
+      },
+      "sponsor": {
+        "@type": "Organization",
+        "name": "The Embassy",
+        "url": "https://www.theembassytc.com/"
+      },
+      "performer": [
+        {"@type": "SportsTeam", "name": "Fundación Unicaja"},
+        {"@type": "SportsTeam", "name": "NBA Academy Africa"},
+        {"@type": "SportsTeam", "name": "Dubai Basketball"},
+        {"@type": "SportsTeam", "name": "Explorers"},
+        {"@type": "SportsTeam", "name": "Orangeville Institute"},
+        {"@type": "SportsTeam", "name": "Veritas Academy"},
+        {"@type": "SportsTeam", "name": "AUS Elite"},
+        {"@type": "SportsTeam", "name": "Varese Academy"},
+        {"@type": "SportsTeam", "name": "The Program"},
+        {"@type": "SportsTeam", "name": "Bella Vista"}
+      ]
+    }
+    </script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-[#1a202c]">
+    <noscript>
+        <h1>Avance Global Basketball Cup 2026</h1>
+        <p>You need to enable JavaScript to run this app. Experience the Avance Global Basketball Cup 2026 in Málaga, Spain. The world's premier international tournament for elite high school and junior basketball clubs. Witness the future of basketball.</p>
+        
+        <section id="overview">
+            <h2>Overview</h2>
+            <p>The AVANCE Global Cup in Málaga, Spain will bring together 10 elite teams from across the globe, featuring top talent from North America, Europe, Africa, Oceania and Asia in a one-of-a-kind international basketball tournament. Hosted at The Embassy Training Facility — a world-class venue that has welcomed NBA players and national teams from around the world — this prestigious event offers an unmatched setting for competition and global exposure.</p>
+        </section>
+        <section id="teams">
+            <h2>THE TEAMS</h2>
+            <p>Featuring 5 continents, 7 countries, and 10 elite teams.</p>
+        </section>
+        <section id="event">
+          <h2>The Event: Beyond the game</h2>
+          <p>The event format consists of 10 teams in 2 groups, leading to a final day of placement games to crown the champion at The Embassy. A weekend of basketball complemented by fan activations and entertainment, creating an unforgettable experience beyond the court. The event will be broadcast globally via streaming, bringing the action to fans worldwide.</p>
+        </section>
+        <section id="venue">
+            <h2>The Venue: A Global Basketball Epicenter</h2>
+            <p>The tournament will be held on the Costa del Sol at The Embassy, an elite center co-founded by former professional players José Manuel Calderón and Berni Rodríguez. National teams like USA, Spain, and Germany, along with NBA stars have used its state-of-the-art facilities.</p>
+        </section>
+        <section id="offer">
+            <h2>What we offer?</h2>
+            <p>We offer elite scholastic teams exposure to NCAA coaches, professional scouts, and global basketball leaders, networking with executives from multiple industries, and cultural immersion in historic Málaga, Spain.</p>
+        </section>
+        <section id="gallery-preview">
+            <h2>The Last Edition in Images</h2>
+            <p>Relive the best moments of the Avance Global Cup 2024. A showcase of elite talent, intense competition, and unforgettable highlights from San Diego, California.</p>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Interested in Partnership? Contact Hernan Olaya, Director of Operations, for partnership opportunities. Email: hernan@avancesports.org, Phone: +1 (619) 850-9247.</p>
+        </section>
+    </noscript>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

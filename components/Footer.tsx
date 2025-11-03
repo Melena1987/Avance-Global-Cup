@@ -1,7 +1,15 @@
 import React from 'react';
-import Link from 'next/link';
 
-const Footer: React.FC = () => {
+interface FooterProps {
+  navigateTo: (page: string) => void;
+}
+
+const Footer: React.FC<FooterProps> = ({ navigateTo }) => {
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, page: string) => {
+    e.preventDefault();
+    navigateTo(page);
+  };
 
   return (
     <footer id="contact" className="bg-[#151f28] border-t border-gray-800 py-12">
@@ -12,25 +20,26 @@ const Footer: React.FC = () => {
             <p className="text-gray-400 mb-6 max-w-xl mx-auto">
                 Elevate your brand by joining a premier international event that unites sports, business, and culture.
             </p>
-            <Link 
+            <a 
                 href="/partner" 
+                onClick={(e) => handleNavClick(e, 'partner')}
                 className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
                 Explore Opportunities
-            </Link>
+            </a>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
           
           {/* Column 1: Logo & Event Info */}
           <div className="md:col-span-3 flex flex-col items-center md:items-start">
-            <Link href="/" className="cursor-pointer" aria-label="Go to homepage">
+            <a href="/" onClick={(e) => handleNavClick(e, 'main')} className="cursor-pointer" aria-label="Go to homepage">
               <img 
                 src="https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761946347121_avance_global_cup_logo.png?alt=media&token=b4d7d75a-dc46-436c-b5c5-81edd0ba6154" 
                 alt="Avance Global Cup Logo" 
                 className="h-16 w-auto"
               />
-            </Link>
+            </a>
             <p className="mt-4 text-center md:text-left">Málaga, Spain | January 29 to 31, 2026</p>
           </div>
 
@@ -38,9 +47,9 @@ const Footer: React.FC = () => {
           <div className="md:col-span-3 text-center md:text-left">
              <h3 className="text-xl font-bold text-white mb-4">Quick Links</h3>
              <ul className="space-y-2">
-                <li><Link href="/" className="text-gray-300 hover:text-blue-400 transition-colors">Home</Link></li>
-                <li><Link href="/partner" className="text-gray-300 hover:text-blue-400 transition-colors">Be a Partner</Link></li>
-                <li><Link href="/gallery2024" className="text-gray-300 hover:text-blue-400 transition-colors">Gallery 2024</Link></li>
+                <li><a href="/" onClick={(e) => handleNavClick(e, 'main')} className="text-gray-300 hover:text-blue-400 transition-colors">Home</a></li>
+                <li><a href="/partner" onClick={(e) => handleNavClick(e, 'partner')} className="text-gray-300 hover:text-blue-400 transition-colors">Be a Partner</a></li>
+                <li><a href="/gallery2024" onClick={(e) => handleNavClick(e, 'gallery')} className="text-gray-300 hover:text-blue-400 transition-colors">Gallery 2024</a></li>
              </ul>
           </div>
 
@@ -80,9 +89,9 @@ const Footer: React.FC = () => {
 
         <div className="mt-10 pt-6 border-t border-gray-700 flex flex-col sm:flex-row justify-between items-center text-sm">
             <p className="order-2 sm:order-1 mt-4 sm:mt-0">&copy; {new Date().getFullYear()} AVANCE Global. All rights reserved.</p>
-            <Link href="/legal" className="order-1 sm:order-2 text-gray-400 hover:text-white transition-colors duration-200">
+            <a href="/legal" onClick={(e) => handleNavClick(e, 'legal')} className="order-1 sm:order-2 text-gray-400 hover:text-white transition-colors duration-200">
                 Terms and Conditions & Cookie Policy
-            </Link>
+            </a>
         </div>
       </div>
     </footer>
