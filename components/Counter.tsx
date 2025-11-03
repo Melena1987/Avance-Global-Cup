@@ -10,7 +10,8 @@ const easeOutCubic = (t: number): number => (--t) * t * t + 1;
 
 const Counter: React.FC<CounterProps> = ({ end, duration = 1500, isVisible }) => {
   const [count, setCount] = useState(0);
-  const animationFrameId = useRef<number>();
+  // FIX: Explicitly initialize useRef with null. The `useRef<number>()` overload can cause an "Expected 1 arguments, but got 0" error in some environments.
+  const animationFrameId = useRef<number | null>(null);
   const hasAnimated = useRef(false);
 
   useEffect(() => {
