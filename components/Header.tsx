@@ -30,9 +30,9 @@ const Header: React.FC<HeaderProps> = ({ navigateTo, currentPage }) => {
 
   const navLinks = [
     { href: '#overview', label: 'Overview' },
+    { href: '#venue', label: 'Venue' },
     { href: '#teams', label: 'Teams' },
     { href: '#event', label: 'Event' },
-    { href: '#venue', label: 'Venue' },
     { href: '#offer', label: 'Offer' },
     { href: '#gallery-preview', label: 'Gallery' },
     { href: '#contact', label: 'Contact' },

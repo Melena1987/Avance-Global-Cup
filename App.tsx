@@ -68,9 +68,9 @@ const App: React.FC = () => {
           <main>
             <Hero />
             <Overview />
+            <Venue />
             <Teams navigateTo={navigateTo} />
             <EventDetails />
-            <Venue />
             <Offer />
             <GalleryPreview navigateTo={navigateTo} />
           </main>
