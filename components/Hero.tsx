@@ -90,11 +90,11 @@ const Hero: React.FC = () => {
               {[...teamLogos, ...teamLogos].map((logo, index) => {
                   const isSpecialLogo = logo.name === 'NBA Academy Africa' || logo.name === 'The Program';
                   return (
-                      <div key={`${logo.name}-${index}`} title={logo.name} className="flex-shrink-0 w-24 mx-8 flex items-center justify-center transition-transform duration-300 ease-in-out hover:scale-110">
+                      <div key={`${logo.name}-${index}`} title={logo.name} className="flex-shrink-0 w-20 mx-6 flex items-center justify-center transition-transform duration-300 ease-in-out hover:scale-110">
                           <img 
                             src={logo.url} 
                             alt={`${logo.name} logo`} 
-                            className={`w-auto object-contain ${isSpecialLogo ? 'h-20' : 'h-24'} opacity-80 hover:opacity-100 transition-opacity`}
+                            className={`w-auto object-contain ${isSpecialLogo ? 'h-16' : 'h-20'} opacity-80 hover:opacity-100 transition-opacity`}
                           />
                       </div>
                   );
