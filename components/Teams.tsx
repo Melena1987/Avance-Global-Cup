@@ -16,7 +16,7 @@ const Teams: React.FC<TeamsProps> = ({ navigateTo }) => {
   };
 
   return (
-    <section id="teams" className="py-20 bg-[#151f28] overflow-hidden">
+    <section id="teams" className="py-20 bg-[#0c0c0c] overflow-hidden">
       <div ref={contentRef} className={`reveal ${isVisible ? 'visible' : ''} container mx-auto px-6 text-center`}>
         <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16 mb-12">
             <div>
@@ -42,7 +42,7 @@ const Teams: React.FC<TeamsProps> = ({ navigateTo }) => {
         
         <div className="w-full max-w-6xl mx-auto rounded-lg overflow-hidden">
           <img 
-              src="https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761985339371_mapa_con_logos_avance_global_cup.png?alt=media&token=a8c150b5-7a9d-4ffe-b581-d3d5acc07dca" 
+              src="https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1762448086692_Captura_de_pantalla_2025-11-06_175422.png?alt=media&token=d7029c5b-413b-454f-ac9f-1edead790482" 
               alt="Map of participating teams"
               className="w-full h-auto object-contain"
           />
