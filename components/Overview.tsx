@@ -19,14 +19,12 @@ const Overview: React.FC = () => {
         </p>
         
         <div className="flex flex-col sm:flex-row items-center justify-start gap-4 sm:gap-6 mt-8">
-          <p className="text-gray-400 italic text-lg shrink-0">*Our event is being sanctioned by the :</p>
-          <div className="flex items-center gap-4 sm:gap-6">
-            <img 
-              src="https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1762446589359_logo_nba_400x400.png?alt=media&token=98a22c9b-5ef4-4594-a2b9-11838230c606" 
-              alt="NBA Logo" 
-              className="h-16 w-auto object-contain" 
-            />
-          </div>
+          <p className="text-gray-300 text-lg">Officially sanctioned by the NBA.</p>
+          <img 
+            src="https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1762446589359_logo_nba_400x400.png?alt=media&token=98a22c9b-5ef4-4594-a2b9-11838230c606" 
+            alt="NBA Logo" 
+            className="h-16 w-auto object-contain" 
+          />
         </div>
       </div>
     </section>
