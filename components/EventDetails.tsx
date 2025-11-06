@@ -39,7 +39,7 @@ const EventDetails: React.FC = () => {
             <div className="col-start-1 row-start-1 w-full h-full bg-[#1a202c] opacity-80" aria-hidden="true"></div>
             <div className="container mx-auto px-6 relative z-10 col-start-1 row-start-1 py-20">
                 <h2 className="text-4xl font-extrabold text-white text-center mb-12">The Event: Beyond the game</h2>
-                <div ref={gridRef} className="grid md:grid-cols-3 gap-8">
+                <div ref={gridRef} className="grid md:grid-cols-3 gap-8 mb-16">
                     <div className={`reveal ${isVisible ? 'visible' : ''}`}>
                         <DetailCard 
                             title="Format" 
@@ -53,7 +53,10 @@ const EventDetails: React.FC = () => {
                         </DetailCard>
                     </div>
                      <div className={`reveal ${isVisible ? 'visible' : ''}`} style={{transitionDelay: '200ms'}}>
-                        <DetailCard title="Complete Experience" description="A weekend of basketball complemented by fan activations and entertainment, creating an unforgettable experience beyond the court.">
+                        <DetailCard 
+                            title="Complete Experience" 
+                            description="A full weekend of basketball, combined with fan activations, entertainment, and a scholastic component where players attend the AVANCE Sports Conference — creating an unforgettable experience that goes far beyond the court."
+                        >
                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" />
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2 12H22" />
@@ -63,13 +66,18 @@ const EventDetails: React.FC = () => {
                         </DetailCard>
                     </div>
                      <div className={`reveal ${isVisible ? 'visible' : ''}`} style={{transitionDelay: '400ms'}}>
-                        <DetailCard title="Global Reach" description="The event will be broadcast globally via streaming, bringing the action to fans worldwide.">
+                        <DetailCard title="Global Reach" description="The event will be broadcast globally via live streaming, bringing the action to fans around the world and offering a premier opportunity for brands to gain international visibility and engagement.">
                             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.25 9.75h17.5M3.25 14.25h17.5M9.75 3.25c1.5-1.5 4.5-1.5 6 0M14.25 20.75c-1.5 1.5-4.5 1.5-6 0"></path>
                             </svg>
                         </DetailCard>
                     </div>
+                </div>
+                <div className={`reveal ${isVisible ? 'visible' : ''}`} style={{transitionDelay: '600ms'}}>
+                    <p className="max-w-4xl mx-auto text-center text-gray-300 leading-relaxed text-lg">
+                        The goal is to establish the Global Basketball Cup as the most prestigious international youth basketball tournament in the world, creating a platform that serves as a bridge between continents. Inspired by major global sporting events, it blends elite competition, culture, entertainment, and the educational component of the AVANCE Sports Conference — resulting in a high-impact experience for players, fans, and sponsors.
+                    </p>
                 </div>
             </div>
         </section>
