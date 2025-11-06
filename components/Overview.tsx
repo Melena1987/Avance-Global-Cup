@@ -10,7 +10,7 @@ const Overview: React.FC = () => {
       <div ref={contentRef} className={`reveal ${isVisible ? 'visible' : ''} container mx-auto px-6 max-w-4xl`}>
         <h2 className="text-4xl sm:text-5xl font-extrabold text-white mb-6">Overview</h2>
         <p className="text-lg text-gray-300 leading-relaxed mb-12">
-          The AVANCE Global Cup in Málaga, Spain will bring together 10 elite teams from across the globe, featuring top talent from North America, Europe, Africa, Oceania and Asia in a one-of-a-kind international basketball tournament. Hosted at The Embassy Training Facility — a world-class venue that has welcomed NBA players and national teams from around the world — this prestigious event offers an unmatched setting for competition and global exposure.
+          The AVANCE Global Cup in Málaga, Spain will bring together 10 elite teams from across the world, showcasing top talent from North America, Europe, Africa, Oceania, and Asia in a one-of-a-kind international tournament. Hosted at The Embassy Training Facility — a world-class venue that has welcomed NBA stars and national teams — this prestigious event provides an unparalleled stage for competition, development, and global exposure.
         </p>
 
         <h3 className="text-4xl sm:text-5xl font-extrabold text-white mb-6">Event Context</h3>
