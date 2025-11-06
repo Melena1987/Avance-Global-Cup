@@ -1,4 +1,5 @@
 import React from 'react';
+import CountdownTimer from './CountdownTimer';
 
 interface FooterProps {
   navigateTo: (page: string) => void;
@@ -41,6 +42,7 @@ const Footer: React.FC<FooterProps> = ({ navigateTo }) => {
               />
             </a>
             <p className="mt-4 text-center md:text-left">Málaga, Spain | January 29 to 31, 2026</p>
+            <CountdownTimer />
           </div>
 
           {/* Column 2: Quick Links */}
