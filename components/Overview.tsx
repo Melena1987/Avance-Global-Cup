@@ -22,15 +22,9 @@ const Overview: React.FC = () => {
           <p className="text-gray-400 italic text-lg shrink-0">*Our event is being sanctioned by the :</p>
           <div className="flex items-center gap-4 sm:gap-6">
             <img 
-              src="https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761953861247_nba.png?alt=media&token=738375bd-9369-4ba6-97db-0c2879131116" 
+              src="https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1762446589359_logo_nba_400x400.png?alt=media&token=98a22c9b-5ef4-4594-a2b9-11838230c606" 
               alt="NBA Logo" 
               className="h-16 w-auto object-contain" 
-            />
-            <span className="text-2xl text-gray-500">&</span>
-            <img 
-              src="https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1761953861247_fiba.png?alt=media&token=9bfb33df-5c09-4d97-a105-72d20dad3436" 
-              alt="FIBA Logo" 
-              className="h-14 w-auto object-contain" 
             />
           </div>
         </div>
