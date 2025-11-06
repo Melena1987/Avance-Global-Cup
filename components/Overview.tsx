@@ -15,7 +15,7 @@ const Overview: React.FC = () => {
 
         <h3 className="text-4xl sm:text-5xl font-extrabold text-white mb-6">Event Context</h3>
         <p className="text-lg text-gray-300 leading-relaxed mb-12">
-          AVANCE Global Cup builds on the success of the AVANCE at L'ATTITUDE Basketball Classic, which drew over <span className="font-bold text-white">50 NCAA</span> coaches and <span className="font-bold text-white">25 NBA scouts</span>. More than a tournament, it is a global stage where sports, business, media, and culture converge — uniting elite teams from around the world and attracting international attention.
+          AVANCE Global Cup builds on the success of the AVANCE at L'ATTITUDE Basketball Classic, which drew over <span className="font-bold text-white">100+ NCAA</span> coaches and <span className="font-bold text-white">28 NBA scouts and front office personnel</span>. More than a tournament, it is a global stage where sports, business, media, and culture converge — uniting elite teams from around the world and attracting international attention.
         </p>
         
         <div className="flex flex-col sm:flex-row items-center justify-start gap-4 sm:gap-6 mt-8">
