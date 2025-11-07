@@ -42,7 +42,7 @@ const Teams: React.FC<TeamsProps> = ({ navigateTo }) => {
         
         <div className="w-full max-w-6xl mx-auto rounded-lg overflow-hidden">
           <img 
-              src="https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1762448086692_Captura_de_pantalla_2025-11-06_175422.png?alt=media&token=d7029c5b-413b-454f-ac9f-1edead790482" 
+              src="https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1762537108602_Dise_o_sin_t_tulo.png?alt=media&token=078115a8-c30b-45af-a3ee-9c66cf88c48d" 
               alt="Map of participating teams"
               className="w-full h-auto object-contain"
           />
